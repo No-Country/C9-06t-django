@@ -1,0 +1,145 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto Flex', sans-serif;
+}
+
+:root {
+    --main-color:#346d4de6;
+    --main-color-hover:#479669e6;
+    --borders:#8585858f;
+    --bone-color: #e8f1ee;
+    --border-bold: #858585;
+}
+
+/* Body styles */
+.dashboard-background {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color:var(--main-color);
+    height: 100vh;
+}
+
+.dashboard {
+    display:grid;
+    place-content: center;
+    grid-template-columns: 15vw 75vw;
+    grid-template-rows: 15vh 80vh;
+}
+
+.user {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction:row;
+    background-color: var(--bone-color);
+    border-radius: 6px 0 0 0;
+    font-size: 24px;
+    font-weight: 700;
+    gap:17px;
+    overflow-wrap: break-word;
+}
+.user-img {
+    display:block;
+    min-height: 50px;
+    min-width: 50px;
+    border-radius:6px;
+    border:2px var(--borders) solid;
+}
+
+.navigation {
+    display:flex;
+    justify-content:space-between;
+    align-items: center;
+    padding: 0 25px 0 25px;
+    background-color:#fff;
+    border-radius: 0 6px 0 0;
+}
+
+.nav-list {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    list-style: none;
+    gap: 30px;
+    font-size: 22px;
+    
+}
+
+.nav-list-button{
+    text-decoration:none;
+    color:#000;
+    font-weight: 400;
+}
+
+
+.selected{
+    color: var(--border-bold);
+}
+
+.nav-list-button:hover {
+    color:var(--border-bold);
+}
+
+.nav-buttons {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    gap:11px;
+}
+
+.nav-currency-select {
+    display:flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 14vw;
+    height: 10vh;
+    border:2px var(--borders) solid;
+    border-radius: 6px;
+}
+
+.img-currency {
+    display:block;
+    min-width:50px;
+    min-height:50px;
+    border-radius: 6px;
+    border: 2px var(--borders) solid;
+}
+
+.division-line {
+    height: inherit;
+    border: 0.5px var(--borders) solid;
+}
+
+.currency-select {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 50px;
+    outline:none;
+    border:0;
+    font-size:22px;
+    text-align: center;
+}
+
+.nav-button{
+    display:flex;
+    height: 10vh;
+    width: 11vw;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--main-color);
+    border:0;
+    border-radius: 6px;
+    font-size: 22px;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.nav-button:hover {
+    background-color: var(--main-color-hover);
+}
