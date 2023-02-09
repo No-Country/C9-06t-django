@@ -1,0 +1,162 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto Flex', sans-serif;
+}
+
+:root {
+    --main-color:#346d4de6;
+    --main-color-hover:#479669e6;
+    --borders:#8585858f;
+    --bone-color: #e8f1ee;
+}
+
+.FX-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:fit-content;
+}
+
+.FX-calculator {
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+    flex-direction: column;
+    width:25rem;
+    height: 75vh;
+    padding-top: 2.5rem;
+    gap: 2rem;
+    border:2px var(--borders) solid; 
+    border-radius: 10px;
+}
+
+.FX-title {
+    font-size: 30px;
+    color:var(--main-color);
+    text-align: center;
+}
+
+.formularioHome {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:1rem;
+    width: 80%;
+}
+
+.form-group {
+    width: 100%;
+}
+
+.form-input {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.FX-icon {
+    display: block;
+    position:absolute;
+    transform: translate(-40px,5px);
+    cursor:pointer;
+    transition: all 0.2s ease;
+}
+
+.FX-icon:hover {
+    fill: var(--main-color-hover);
+}
+
+.form-control {
+    display:block;
+    font-size: 150%;
+    width: 100%;
+    height: 6vh;
+    border:none;
+    padding-left:1rem;
+    padding-right: 3rem;
+    border-bottom: 2px var(--main-color) solid;
+}
+
+.form-control:focus {
+    border:none;
+}
+
+
+
+/* Remove the increment/decrement button on number inputs */
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+.form-selects {
+    display:flex;
+    flex-direction: column;
+    gap:2rem;
+    width: 100%;
+}
+
+.FX-select {
+    width: 100%;
+    height: 8vh;
+    font-size: 120%;
+    text-align: center;
+    outline: none;
+    border:0;
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;  
+    cursor: pointer;
+}
+
+.FX-select-padding {
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+    border: 0;
+    border-left: 4px var(--main-color) solid;
+    border-right: 4px var(--main-color) solid;
+    border-radius: 10px 10px 10px 10px;
+}
+
+.FX-select-padding:hover {
+    border-left: 4px var(--main-color) solid;
+    border-right: 4px var(--main-color) solid;
+}
+
+
+.FX-btn-calcular-divisa {
+    display:flex;
+    background: var(--main-color);
+    border-radius: 10px;
+    width: 100%;
+    height: 7vh;
+    cursor:pointer;
+    border:0;
+    color:#fff;
+    font-size: 150%;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.FX-btn-calcular-divisa:hover {
+    background: var(--main-color-hover);
+}
+
+.contenedor-resultado {
+    font-size: 200%;
+    color:var(--main-color);
+    font-weight: bold;
+    margin-top: 2.5rem;
+}
+
+@media screen and (max-width: 400px){
+    .FX-calculator {
+        border: none;
+    }
+}
