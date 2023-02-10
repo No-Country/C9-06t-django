@@ -42,6 +42,7 @@
     overflow-wrap: break-word;
     flex-wrap: wrap;
     border-bottom: 2px #DCE3E1 solid;
+    padding:1rem;
 }
 
 .user-img {
@@ -68,9 +69,8 @@
     align-items: center;
     flex-direction: row;
     list-style: none;
-    gap: 30px;
+    gap: 2vw;
     font-size: 22px;
-    
 }
 
 .nav-list-button{
@@ -225,7 +225,7 @@
     align-self: flex-start;
     height: 10%;
     justify-content: end;
-    align-items:center;
+    align-items:left;
 }
 
 .title {
@@ -240,38 +240,112 @@
 
 .cards {
     display:grid;
-    grid-template-columns: 276px 276px 276px;
+    grid-template-columns: repeat(auto-fill,30%);
     grid-template-rows:max-content max-content;
     place-content: center;
     place-items:center;
     width: 95%;
     height: 40%;
     padding:25px 0 25px 0;
-    border: 2px var(--borders) solid;
     border-radius: 6px;
     gap:24px;
 }
 
 .main-card {
     border: 2px var(--borders) solid;
-    padding:18px;
+    padding:5%;
     border-radius:6px;
     display:flex;
     flex-direction: row;
+    justify-content: center;
+    align-items: center;
     gap:20px;
 }
 
 .card-img {
-    width: 50px;
-    height: 50px;
+    min-width: 50px;
+    min-height: 50px;
+    max-width: 50px;
+    max-height: 50px;
     border:2px var(--borders) solid;
     border-radius:6px;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    overflow: hidden;
+    font-weight:500;
+    color: var(--border-bold);
+}
+
+.card-text {
+    font-weight: bold;
+    overflow: none;
 }
 
 .dashboard-chart {
     display:flex;
     border:2px var(--borders) solid;
-    width: 95%;
+    width: 60%;
     height: 40%;
     border-radius: 6px;
+}
+
+.aside-list-item:nth-child(7),.aside-list-item:nth-child(8),.aside-list-item:nth-child(9),.aside-list-item:nth-child(10){
+    display:none;
+} 
+
+
+@media screen and (max-width:1000px) {
+    .img-currency,.division-line {
+        display:none;
+    }
+    .currency-select {
+        width: 11vw;
+    }
+}
+
+@media screen and (max-width:850px){
+    .user-name {
+        display:none;
+    }
+}
+
+@media screen and (max-width:750px){
+    .card-title{
+        display:none;
+    }
+    .aside-list-item:nth-child(10){
+        display:block;
+    }
+    .nav-list-element:nth-child(4){
+        display:none;
+    }
+}
+
+@media screen and (max-width:600px){
+    .aside-list-item:nth-child(9){
+        display:block;
+    }
+    .nav-list-element:nth-child(3){
+        display:none;
+    }
+}
+
+@media screen and (max-width:400px){
+    .aside-list-item:nth-child(8){
+        display:block;
+    }
+    .nav-list-element:nth-child(2){
+        display:none;
+    }
+}
+
+@media screen and (max-width:250px){
+    .aside-list-item:nth-child(7){
+        display:block;
+    }
+    .nav-list-element:nth-child(1){
+        display:none;
+    }
 }
