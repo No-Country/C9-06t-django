@@ -14,106 +14,95 @@
 {% block boody %}
 
 <header
-        class="bg-dark"
-        style="
-        background: linear-gradient(
-            -174deg,
-            rgba(52, 109, 77, 0.9) 0%,
-            rgba(24, 28, 27, 0.9)
-            ),
-            url('assets/img/fondo.png') right / cover no-repeat,
-            rgba(17, 16, 16, 0);
-        height: 700px;
-        position: relative;
-        margin: 0px 0px 0px 0px;
-        "
+class="bg-dark"
+style="background: linear-gradient(
+      -174deg,
+      rgba(52, 109, 77, 0.9) 0%,
+      rgba(24, 28, 27, 0.9)
+    ),
+    url('{% static '/images/fondo.png' %}') right / cover no-repeat,
+    rgba(17, 16, 16, 0);
+    height: 700px;
+    position: relative;
+    margin: -50px 0px 0px 0px;
+    "
     >
-        <div
-        class="container pt-4 pt-xl-5"
-        style="
-            width: 600px;
-            display: inline-block;
-            margin: 5rem 6% 5% 5%;
-            padding: 0px 0px 0px;
-            height: 500px;
-        "
-        >
         <!--Section: Contact v.2-->
-    <div class="form-register">
-    <section class="mb-4";>
+        <div class="form-register33">
+        <section class="vh-100 gradient-custom">
+            <div class="container py-4 h-100">
+              <div class="row d-flex justify-content-center align-items-center h-100">
+                <div class="col-12 col-md-8 col-lg-6 col-xl-6 mt-5">
+                  <div class="card bg-dark text-white" style="border-radius: 1rem">
+                    <div class="card-body m-2 text-center">
+                      <div class="mb-md-2">
+                        <h2 class="fw-bold mb-2 text-uppercase">Contacto</h2>
+        
+                        <form method="POST" action="">
+                          {% csrf_token %}
+        
+                          <div class="form-outline form-white mb-4">
+                            <input
+                              type="text"
+                              name="name"
+                              id="name"
+                              class="form-control form-control-md"
+                            />
+                            <label class="form-label" for="typeNameX"
+                              >Nombre</label
+                            >
+                          </div>
+        
+                          <div class="form-outline form-white mb-4">
+                            <input
+                              type="email"
+                              name="email"
+                              id="typeEmailX"
+                              class="form-control form-control-md"
+                            />
+                            <label class="form-label" for="typeEmailX"
+                              >Email</label
+                            >
+                          </div>
+                          <div class="form-outline form-white mb-4">
+                            <input
+                              type="asunto"
+                              name="asunto"
+                              id="typeAsuntoX"
+                              class="form-control form-control-md"
+                            />
+                            <label class="form-label" for="typeAsuntoX"
+                              >Asunto</label
+                            >
+                          </div>
+                          <div class="form-outline form-white mb-4">
 
-    <!--Section heading-->
-    <h2 class="h1-responsive font-weight-bold text-center my-4">Contacto</h2>
-    <!--Section description-->
+                            <input
+                              type="message"
+                              name="message"
+                              id="typeMessage"
+                              class="form-control form-control-md"
+                            />
+                            <label class="form-label" for="typeMessageX"
+                              >Mensaje</label
+                            >
+                          </div>
+                          <a class="btn btn-outline-light btn-md px-5" onclick="document.getElementById('contact-form').submit();">Enviar</a>
 
-    <div class="row">
-
-        <!--Grid column-->
-        <div class="col-md-9 mb-md-0 mb-5">
-            <form id="contact-form" name="contact-form" action="mail.php" method="POST">
-
-                <!--Grid row-->
-                <div class="row">
-
-                    <!--Grid column-->
-                    <div class="col-md-6">
-                        <div class="md-form mb-0">
-                            <input type="text" id="name" name="name" class="form-control">
-                            <label for="name" class="">Nombre</label>
-                        </div>
+                        </form>
+                      </div>
+        
+                      {% for message in messages %}
+                      <p class="text-warning">{{message}}</p>
+                      {% endfor %}
+        
                     </div>
-                    <!--Grid column-->
-                    
-                    <!--Grid column-->
-                    <div class="col-md-6">
-                        <div class="md-form mb-0">
-                            <input type="text" id="email" name="email" class="form-control">
-                            <label for="email" class="">Asunto</label>
-                        </div>
-                    </div>
-                    <!--Grid column-->
-
+                  </div>
                 </div>
-                <!--Grid row-->
-
-                <!--Grid row-->
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="md-form mb-0">
-                            <input type="text" id="subject" name="subject" class="form-control">
-                            <label for="subject" class="">Email</label>
-                        </div>
-                    </div>
-                </div>
-                <!--Grid row-->
-
-                <!--Grid row-->
-                <div class="row">
-
-                    <!--Grid column-->
-                    <div class="col-md-12">
-
-                        <div class="md-form">
-                            <textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea"></textarea>
-                            <label for="message">Tu mensaje</label>
-                        </div>
-
-                    </div>
-                </div>
-                <!--Grid row-->
-
-            </form>
-
-            <div class="text-center text-md-left">
-                <a class="btn btn-primary" onclick="document.getElementById('contact-form').submit();">Send</a>
+              </div>
             </div>
-            <div class="status"></div>
+          </section>
         </div>
-        <!--Grid column-->
-
-
-    </section>
-    </div>
     <!--Section: Contact v.2-->
 </header>
 

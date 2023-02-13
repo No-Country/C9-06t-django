@@ -316,14 +316,9 @@ h3{
   color: blue
 }
 
-.form-register {
-  width: 500px;
-  margin-left: 60%;
-  background: #ffffff6c;
+.form-register33 {
   justify-content: center;
-  padding: 30px;
+  padding: 70px;
   border-radius: 20px;
-  color: rgb(0, 0, 0);
   font-family: 'Roboto', sans-serif;
-  box-shadow: 7px 13px 37px #000;
 }
