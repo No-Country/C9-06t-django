@@ -12,4 +12,6 @@ from apps.accounts.decorators import allowed_users
 def home(request):
     context = {}
 
-    return render(request, 'index.html', context)
+    return render(request, 'base/index.html', context)
+
+
