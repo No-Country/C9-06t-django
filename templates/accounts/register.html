@@ -3,13 +3,11 @@
 {% load static %}
 
   {% block titulo %}
-    Register
+    Registrate
   {% endblock titulo %}
 
   {% block static %}
-  <link rel="stylesheet" href="{% static 'css/untitled.css' %}" />
-  <link rel="stylesheet" href="{% static 'css/FX-calculator.css' %}" />
-  <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}" />
+
   {% endblock static %}
 
 {% block boody %}
@@ -28,7 +26,7 @@
 
                   <div class="form-outline form-white mb-4">
                     {{form.username}}
-                    <label class="form-label">Username</label>
+                    <label class="form-label">Nombre de Usuario</label>
                     <div class="text-warning">
                       {{form.username.errors.as_text}}
                     </div>

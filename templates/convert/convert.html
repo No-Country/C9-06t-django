@@ -6,94 +6,12 @@
   {% endblock titulo %}
 
   {% block static %}
-  <link rel="stylesheet" href="{% static 'css/untitled.css' %}" />
-  <link rel="stylesheet" href="{% static 'css/FX-calculator.css' %}" />
-  <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}" />
+
   {% endblock static %}
-
-  {% block Inicio %}
-
-  {% endblock Inicio %}
 
 
 {% block boody %}
 
-<div class="FX-body">
-    <section class="FX-calculator">
-      <h3 class="FX-title">Calculadora de divisas</h3>
-      <form
-        id="contact-form"
-        method="post"
-        action="contact.php"
-        role="form"
-        class="formularioHome"
-        novalidate="true"
-      >
-        <div class="messages"></div>
-        <div class="form-input">
-          <input
-            id="campo-cantidad"
-            type="number"
-            step="0.01"
-            name="cantidad"
-            class="form-control"
-            placeholder="Importe"
-            required="required"
-            data-error="Escribe la cantidad a convertir."
-          />
-          <a class="FX-button">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="30px"
-              height="30px"
-              viewBox="0 0 512 512"
-              class="FX-icon"
-              fill="#346d4de6"
-            >
-              <path
-                d="M32 96l320 0V32c0-12.9 7.8-24.6 19.8-29.6s25.7-2.2 34.9 6.9l96 96c6 6 9.4 14.1 9.4 22.6s-3.4 16.6-9.4 22.6l-96 96c-9.2 9.2-22.9 11.9-34.9 6.9s-19.8-16.6-19.8-29.6V160L32 160c-17.7 0-32-14.3-32-32s14.3-32 32-32zM480 352c17.7 0 32 14.3 32 32s-14.3 32-32 32H160v64c0 12.9-7.8 24.6-19.8 29.6s-25.7 2.2-34.9-6.9l-96-96c-6-6-9.4-14.1-9.4-22.6s3.4-16.6 9.4-22.6l96-96c9.2-9.2 22.9-11.9 34.9-6.9s19.8 16.6 19.8 29.6l0 64H480z"
-              />
-            </svg>
-          </a>
-        </div>
-        <div class="form-selects">
-          <div class="form-group">
-            <div class="FX-select-padding">
-              <select id="origen" class="FX-select">
-                <option value="0">Peso (MX)</option>
-                <option value="1">Dollar (US)</option>
-                <option value="2">Euro</option>
-                <option value="3">Libra</option>
-                <option value="4">Yen</option>
-                <option value="5">Dollar (CAN)</option>
-              </select>
-            </div>
-            <div class="help-block with-errors"></div>
-          </div>
-          <div class="form-group">
-            <div class="FX-select-padding">
-              <select id="origen" class="FX-select">
-                <option value="0">Peso (MX)</option>
-                <option value="1">Dollar (US)</option>
-                <option value="2">Euro</option>
-                <option value="3">Libra</option>
-                <option value="4">Yen</option>
-                <option value="5">Dollar (CAN)</option>
-              </select>
-            </div>
-            <div class="help-block with-errors"></div>
-          </div>
-        </div>
-        <button method="" name="" class="FX-btn-calcular-divisa">
-          Calcular
-        </button>
-        <div class="contenedor-resultado">
-          <!--This content is just an example, everything here must be replaced-->
-          $ 500
-        </div>
-      </form>
-    </section>
-  </div>
 
 {% endblock boody %}
 

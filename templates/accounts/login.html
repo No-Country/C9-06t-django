@@ -3,13 +3,11 @@
 {% load static %}
 
   {% block titulo %}
-    Convert
+    Inicio de Seccion
   {% endblock titulo %}
 
   {% block static %}
-  <link rel="stylesheet" href="{% static 'css/untitled.css' %}" />
-  <link rel="stylesheet" href="{% static 'css/FX-calculator.css' %}" />
-  <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}" />
+
   {% endblock static %}
 
 
@@ -22,7 +20,7 @@
           <div class="card bg-dark text-white" style="border-radius: 1rem">
             <div class="card-body p-5 text-center">
               <div class="mb-md-2">
-                <h2 class="fw-bold mb-2 text-uppercase">Iniciar Sesion</h2>
+                <h2 class="fw-bold mb-2 text-uppercase">Iniciar Seccion</h2>
 
                 <form method="POST" action="">
                   {% csrf_token %}
@@ -35,7 +33,7 @@
                       class="form-control form-control-md"
                     />
                     <label class="form-label" for="typeEmailX"
-                      >Username</label
+                      >Nombre de Usuario</label
                     >
                   </div>
 
@@ -47,14 +45,14 @@
                       class="form-control form-control-md"
                     />
                     <label class="form-label" for="typePasswordX"
-                      >Password</label
+                      >Contraseña</label
                     >
                   </div>
 
                   <input
                     class="btn btn-outline-light btn-md px-5"
                     type="submit"
-                    value="Login"
+                    value="Iniciar"
                   />
                 </form>
               </div>
