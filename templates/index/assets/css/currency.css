@@ -1,0 +1,65 @@
+* {
+    font-family: 'Roboto Flex', sans-serif;
+}
+
+:root {
+    --main-color: #9CCD62;
+    --font-color: #3C3D42;
+    --borders: #E0DDCA;
+}
+
+html {
+    display:flex;
+    justify-content: center;
+}
+
+.currency-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 2px var(--borders) solid;
+    width: 80rem;
+}
+
+.curr-head{
+    display:flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.curr-nav {
+    display:flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.menu-list {
+    display:flex;
+    gap:1rem;
+}
+
+.menu-element {
+    text-decoration: none;
+    color:var(--font-color);
+}
+
+.curr-titles {
+    display:flex;
+    width:100%;
+}
+
+.curr-element {
+    width: 20rem;
+    color:var(--font-color);
+}
+
+.curr-row-element {
+    display:flex;
+    align-items: left;
+}
+
+.curr-row-element div{
+    width: 20rem;
+}
