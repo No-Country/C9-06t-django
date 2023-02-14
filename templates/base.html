@@ -40,10 +40,28 @@
         rel="stylesheet"
         href="https://fonts.googleapis.com/css?family=Roboto+Flex&amp;display=swap"
       />
+      <link rel="stylesheet" href="{% static 'css/untitled.css' %}" />
+      <link rel="stylesheet" href="{% static 'css/FX-calculator.css' %}" />
+      <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}" />
       {% block static %}
 
       {% endblock static %}
     </head>
+    <header
+    class="bg-dark"
+    style="
+      background: linear-gradient(
+          -174deg,
+          rgba(52, 109, 77, 0.9) 0%,
+          rgba(24, 28, 27, 0.9)
+        ),
+        url('{% static '/images/fondo.png' %}') right / cover no-repeat,
+        rgba(17, 16, 16, 0);
+      height: 700px;
+      position: relative;
+      margin: -30px 0px 0px 0px;
+    "
+  >
     <nav
     class="navbar navbar-dark navbar-expand-md sticky-top py-3"
     id="mainNav"
