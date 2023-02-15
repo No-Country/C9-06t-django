@@ -17,6 +17,8 @@ DEBUG = True
 ALLOWED_HOSTS = []
 
 
+API_KEY = "?access_key=d68c15028f6da078f88b480867db0c80"
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -81,14 +83,25 @@ WSGI_APPLICATION = 'exmoney.wsgi.application'
 #     }
 # }
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME':'exmoneydb',
+#         'USER' : 'root',
+#         'PASSWORD' : '',
+#         'HOSTR':'127.0.0.1',
+#         'PORT' : 3306,
+#     }
+# }
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME':'exmoneydb',
-        'USER' : 'root',
-        'PASSWORD' : '',
-        'HOSTR':'127.0.0.1',
-        'PORT' : 3306,
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'exmoney',
+        'USER': 'postgres',
+        'PASSWORD': 'bfix4038.,',
+        'HOST': 'localhost',
+        'PORT': '5432',
     }
 }
 

@@ -15,7 +15,14 @@
 
 
 {% block boody %}
+{% for a in users.crypto%}
+  {{a}}
+  {% comment %} {% for b in a %}
+    {{b}}
+  {% endfor %}  {% endcomment %}
+{% endfor %}
 
+{{users.crypto.611.name}}
 <div class="FX-body">
     <section class="FX-calculator">
       <h3 class="FX-title">Calculadora de divisas</h3>
