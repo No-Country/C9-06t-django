@@ -1,76 +1,20 @@
 {% extends 'base.html' %}
 {% load static %}
 
-{% block titulo %} Badge{% endblock titulo %}
-{% block static %}
-    <link rel="stylesheet" href="{% static 'css/currency.css' %}">
-    <link rel="stylesheet" href="{% static 'css/normalize.css' %}">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,300&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/002c590bf1.js" crossorigin="anonymous"></script>
-{% endblock static %}
+  {% block titulo %}
+    Convertir
+  {% endblock titulo %}
+
+  {% block static %}
+
+  {% endblock static %}
+
+
 
 {% block boody %}
-    <header class="curr-head">
-        <div class="curr-nav">
-            <h2 class="title">
-                DIVISAS
-            </h2>
-            <div class="search-input">
-                <div class="search-img"><i class="fas fa-search"></i></div>
-                <input type="search" class="curr-search" placeholder="Buscar moneda">
-            </div>
-        </div>
-        <nav class="menu-list">
-            <a href="#" class="menu-element">Favoritos</a>
-            <a href="#" class="menu-element">Futuros</a>
-            <a href="#" class="menu-element">Nuevas monedas</a>
-            <a href="#" class="menu-element">Todas las monedas</a>
-        </nav>
-    </header>
-    <main class="curr-row">
-        <div class="curr-titles">
-            <p class="currency curr-element">Moneda</p>
-            <p class="value curr-element">Último precio(USDT)</p>
-            <p class="exchange curr-element">Cambio en 24H</p>
-            <p class="market curr-element">Cap. de Mercado</p>
-        </div>
 
-<!-- {% for a in tasa %}
-    
-{% for b in moneda %}
-        
-{% for c in crypto %}
 
-        <div class="curr-row-element">
-            <div>
-                <div class="curr-img">
-                    <img src="{{ crypto.icon_url }}" alt="">
-                </div>
-                <p class="curr-name">{{ a }}</p>
-            </div>
-            
-            <div class="last-value">
-                <p class="usdt-value">{{ b }}</p>
-                <p class="local-value">12312 ARS</p>
-            </div>
-        
-            <div>
-                <p class="exchangePercent"></p>
-            </div>
-
-            <div>
-                <p class="marketExc">{{ crypto.icon_url }}</p>
-            </div>
-        </div>
-
-{% endfor %}
-            
-{% endfor %}
-        
-{% endfor %} -->
-    <script src="{% static 'js/currency.js' %}"></script>
 {% endblock boody %}
+
 
 

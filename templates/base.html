@@ -1,4 +1,3 @@
-
 {% load static %}
 
 <!DOCTYPE html>
@@ -6,31 +5,27 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <title>
-      {% block titulo %} {% endblock titulo %}
-    </title>
+    <title>{% block titulo %}ExMoney{% endblock titulo %}</title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    
+
     <!-- Place favicon.ico in the root directory -->
 
     <!-- ========================= CSS here ========================= -->
-    <link rel="stylesheet" href="{% static 'css/bootstrap-5.0.0-beta2.min.css' %}" />
+
+    <link
+      rel="stylesheet"
+      href="{% static 'css/bootstrap-5.0.0-beta2.min.css' %}"
+    />
     <link rel="stylesheet" href="{% static 'css/LineIcons.2.0.css' %}" />
     <link rel="stylesheet" href="{% static 'css/tiny-slider.css' %}" />
     <link rel="stylesheet" href="{% static 'css/animate.css' %}" />
     <link rel="stylesheet" href="{% static 'css/main.css' %}" />
-    <link rel="stylesheet" href="{% static 'css/currency.css' %}">
-    <link rel="stylesheet" href="{% static 'css/normalize.css' %}">
-    
-    {% block static %}
-
-    {% endblock static %}
+    {% block static %} {% endblock static %}
   </head>
   <body>
-
-
     <!-- ========================= header start ========================= -->
+    <div class="hero-section-header"></div>
     <header class="header">
       <div class="navbar-area">
         <div class="container">
@@ -41,13 +36,24 @@
                   <img src="{% static 'img/logo/logo.png' %}" alt="Logo" />
 
                 </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <button
+                  class="navbar-toggler"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#navbarSupportedContent"
+                  aria-controls="navbarSupportedContent"
+                  aria-expanded="false"
+                  aria-label="Toggle navigation"
+                >
                   <span class="toggler-icon"></span>
                   <span class="toggler-icon"></span>
                   <span class="toggler-icon"></span>
                 </button>
 
-                <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
+                <div
+                  class="collapse navbar-collapse sub-menu-bar"
+                  id="navbarSupportedContent"
+                >
                   <ul id="nav" class="navbar-nav ms-auto">
                     <li class="nav-item">
                       <a class="" href="{% url 'home' %}">Inicio</a>
@@ -56,24 +62,30 @@
                       <a class="" href="{% url 'badge' %}">Divisas</a>
                     </li>
                     <li class="nav-item">
-                      <a class="" href="{% url 'converter' %}">Calculadora</a>
+
+                      <!-- ? En esta parte necesitamos que valide si estamos en home o no, en caso de que si funciona como una # normal, pero en caso de que no necesitamos volver a home -->
+                      
+                      <a class="" href="#calculadora">Calculadora</a>
                     </li>
                     <li class="nav-item">
                       <a class="" href="{% url 'contacto' %}">Contacto</a>
                     </li>
                     {% if request.user.is_authenticated %}
-                      <li class="nav-item">
-                        <a class="">Hello, {{ request.User.first_name }} {{ request.User.last_name }}</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="" href="{% url 'logout' %}">Cerrar Sesioón</a>
-                      </li>
+                    <li class="nav-item">
+                      <a class=""
+                        >Hola, {{ request.user.first_name }}
+                        {{request.user.last_name}}</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a class="" href="{% url 'logout' %}">Cerrar Sesión</a>
+                    </li>
                     {% else %}
-                      <li class="nav-item">
-                        <a class="" href="{% url 'login' %}">Iniciar sesión</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="" href="{% url 'register' %}">Registrarse.</a>
+                    <li class="nav-item">
+                      <a class="" href="{% url 'login' %}">Iniciar Sesión</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="" href="{% url 'register' %}">Registrarse</a>
                     </li>
                     {% endif %}
                   </ul>
@@ -90,59 +102,57 @@
       <!-- navbar area -->
     </header>
     <!-- ========================= header end ========================= -->
-    
-    {% block boody %}
-      
-    {% endblock boody %}
-      
+
+    {% block body %} {% endblock body %}
+
     <!-- ========================= footer start ========================= -->
     <footer id="footer" class="footer">
-			<div class="container">
-				<div class="widget-wrapper">
-					<div class="row">
-						<div class="col-xl-4 col-md-6">
-							<div class="footer-widget">
-								<h3>Servicios</h3>
-								<ul class="links">
-									<li> <a href="javascript:void(0)">Mercado</a> </li>
-									<li> <a href="javascript:void(0)">Divisas</a> </li>
-									<li> <a href="javascript:void(0)">Calculadora</a> </li>
-									<li> <a href="javascript:void(0)">Wallet</a> </li>
-								</ul>
-							</div>
-						</div>
-						<div class="col-xl-4 col-md-6">
-							<div class="footer-widget">
-								<h3>Soporte</h3>
-								<ul class="links">
-									<li> <a href="javascript:void(0)">Guia principiantes</a> </li>
-									<li> <a href="javascript:void(0)">Preguntas frecuentes</a> </li>
-									<li> <a href="javascript:void(0)">Feedback</a> </li>
-									<li> <a href="javascript:void(0)">Centro de Ayuda</a> </li>
-								</ul>
-							</div>
-						</div>
-						<div class="col-xl-3 col-md-6">
-							<div class="footer-widget">
-								<h3>Empresa</h3>
-								<ul class="links">
-									<li> <a href="javascript:void(0)">Sobre nosotros</a> </li>
-									<li> <a href="javascript:void(0)">Vision</a> </li>
-									<li> <a href="javascript:void(0)">Aviso de riesgo</a> </li>
-									<li> <a href="javascript:void(0)">Politica de privacidad</a> </li>
-								</ul>
-							</div>
-						</div>
-						
-					</div>
-				</div>
-
-			</div>
-		</footer>
+      <div class="container">
+        <div class="widget-wrapper">
+          <div class="row">
+            <div class="col-xl-4 col-md-6">
+              <div class="footer-widget">
+                <h3>Servicios</h3>
+                <ul class="links">
+                  <li><a href="javascript:void(0)">Mercado</a></li>
+                  <li><a href="javascript:void(0)">Divisas</a></li>
+                  <li><a href="javascript:void(0)">Calculadora</a></li>
+                  <li><a href="javascript:void(0)">Wallet</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-xl-4 col-md-6">
+              <div class="footer-widget">
+                <h3>Soporte</h3>
+                <ul class="links">
+                  <li><a href="javascript:void(0)">Guia principiantes</a></li>
+                  <li><a href="javascript:void(0)">Preguntas frecuentes</a></li>
+                  <li><a href="javascript:void(0)">Feedback</a></li>
+                  <li><a href="javascript:void(0)">Centro de Ayuda</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-xl-3 col-md-6">
+              <div class="footer-widget">
+                <h3>Empresa</h3>
+                <ul class="links">
+                  <li><a href="javascript:void(0)">Sobre nosotros</a></li>
+                  <li><a href="javascript:void(0)">Vision</a></li>
+                  <li><a href="javascript:void(0)">Aviso de riesgo</a></li>
+                  <li>
+                    <a href="javascript:void(0)">Politica de privacidad</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
     <!-- ========================= footer end ========================= -->
 
     <!-- ========================= scroll-top ========================= -->
- 
+
     <!-- ========================= JS here ========================= -->
     <script src="{% static 'js/bootstrap-5.0.0-beta2.min.js' %}"></script>
     <script src="{% static 'js/tiny-slider.js' %}"></script>
@@ -150,10 +160,6 @@
     <script src="{% static 'js/polifill.js' %}"></script>
     <script src="{% static 'js/main.js' %}"></script>
 
-    
-    {% block js %}
- 
-    {% endblock js %}
-      
+    {% block js %} {% endblock js %}
   </body>
 </html>

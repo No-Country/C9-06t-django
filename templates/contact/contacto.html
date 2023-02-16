@@ -1,6 +1,5 @@
 {% extends 'base.html' %}
 
-{% load static %}
 
 {% block titulo %}
   Contacto
@@ -79,15 +78,51 @@ class="">
                         </form>
                       </div>
                     </div>
-                  </div>
+
+                    <div class="form-outline form-white mb-4 border-radius">
+                      <input
+                        type="email"
+                        name="email"
+                        id="typeEmailX"
+                        placeholder="Email"
+                        class="form-control form-control-md"
+                        required
+                      />{{form.email}}
+                    </div>
+                    <div class="form-outline form-white mb-4">
+                      <input
+                        type="asunto"
+                        name="asunto"
+                        id="typeAsuntoX"
+                        placeholder="Asunto"
+                        class="form-control form-control-md"
+                        required
+                      />{{form.affair}}
+                    </div>
+                    <div class="form-outline form-white mb-4">
+                      <input
+                        type="message"
+                        name="message"
+                        id="typeMessage"
+                        placeholder="Mensaje"
+                        class="form-control form-control-md"
+                        required
+                      />{{form.message}}
+                    </div>
+                    <button
+                      class="btn btn-outline-light btn-md px-5"
+                      type="submit"
+                    >
+                      Enviar
+                    </button>
+                  </form>
                 </div>
               </div>
             </div>
-          </section>
+          </div>
         </div>
-    <!--Section: Contact v.2-->
-    
-</header>
-{% endblock boody %}
+      </div>
+    </section>
+  <!--Section: Contact v.2-->
 
-
+{% endblock body %}
