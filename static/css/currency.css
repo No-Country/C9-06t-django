@@ -11,6 +11,7 @@
     margin-top: 15vh;
     font-family: 'Roboto Flex', sans-serif;
     height: 85vh;
+    background-color:#fff;
 }
 
 .curr-search::-webkit-search-decoration,
