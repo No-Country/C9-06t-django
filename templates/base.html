@@ -25,6 +25,7 @@
   </head>
   <body>
     <!-- ========================= header start ========================= -->
+    <div class="hero-section-header"></div>
     <header class="header">
       <div class="navbar-area">
         <div class="container">
@@ -60,7 +61,10 @@
                       <a class="" href="{% url 'badge' %}">Divisas</a>
                     </li>
                     <li class="nav-item">
-                      <a class="" href="{% url 'converter' %}">Calculadora</a>
+
+                      <!-- ? En esta parte necesitamos que valide si estamos en home o no, en caso de que si funciona como una # normal, pero en caso de que no necesitamos volver a home -->
+                      
+                      <a class="" href="#calculadora">Calculadora</a>
                     </li>
                     <li class="nav-item">
                       <a class="" href="{% url 'contacto' %}">Contacto</a>
