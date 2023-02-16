@@ -4,14 +4,14 @@
     --borders: #f1f1f1;
 }
 
+
 .currency-body {
     display:flex;
     justify-content: center;
     align-items: start;
-    margin-top: 15vh;
     font-family: 'Roboto Flex', sans-serif;
-    height: 85vh;
     background-color:#fff;
+    
 }
 
 .curr-search::-webkit-search-decoration,
@@ -23,16 +23,21 @@
 
 .currency-wrapper {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-start;
+    align-items:center;
     flex-direction: column;
     border: 2px var(--borders) solid;
     width: 80rem;
-    background-color: #fff;
+    background:#fff;
     border-radius: 6px;
+    height:fit-content;
+    margin-top: 15vh;
+    min-height: 60vh;
+    height: fit-content;
+    z-index: 1;
 }
 
-.title {
+.curr-nav .title {
     font-size: 34px;
     font-weight: bold;
     color:var(--font-color);

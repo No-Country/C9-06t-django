@@ -1,79 +1,76 @@
+
 {% extends 'base.html' %}
 {% load static %}
 
   {% block titulo %}
-    Convertir
+    Iniciar Sesión
   {% endblock titulo %}
 
-  {% block static %}
-  <link rel="stylesheet" href="{% static 'css/currency.css'%}">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,300&display=swap" rel="stylesheet">
+  {% block static %} 
+     <link rel="stylesheet" href="{% static 'css/currency.css' %}"/> 
   {% endblock static %}
 
 
-
 {% block boody %}
-<section class="currency-body">
-  <div class="currency-wrapper">
-      <header class="curr-head">
-          <div class="curr-nav">
-              <h2 class="title">
-                  DIVISAS
-              </h2>
-              <div class="search-input">
-                  <div class="search-img"><i class="fas fa-search"></i></div>
-                  <input type="search" class="curr-search" placeholder="Buscar moneda">
-              </div>
-          </div>
-          <nav class="menu-list">
-              <a href="#" class="menu-element">Favoritos</a>
-              <a href="#" class="menu-element">Futuros</a>
-              <a href="#" class="menu-element">Nuevas monedas</a>
-              <a href="#" class="menu-element">Todas las monedas</a>
-          </nav>
-      </header>
-      <main class="curr-row">
-          <div class="curr-titles">
-              <p class="currency curr-element">Moneda</p>
-              <p class="value curr-element">Último precio(USDT)</p>
-              <p class="exchange curr-element">Cambio en 24H</p>
-              <p class="market curr-element">Cap. de Mercado</p>
-          </div>
-          
-          <!-- {% for dato in lista %} -->
-          <!-- {% for nombre in moneda %}    
-          {% for info in tasa %} -->
-          <div class="curr-row-element">
-              <div>
-                  <div class="curr-img">
-  
-                  </div>
-                  <p class="curr-name">{{nombre}}</p>
-              </div>  
-              
-              <div class="last-value">
-                  <p class="usdt-value">{{info}}</p>
-                  <p class="local-value">12312 ARS</p>
-              </div>
-  <!--             
-              <div>
-                  <p class="exchangePercent">{{ dato.name }}</p>
-              </div>
-              <div>
-                  <p class="marketExc">{{ dato.max_supply }}</p>
-              </div> -->
-          </div>
-          <!-- {% endfor %}
-          {% endfor %} -->
-          <!-- {% endfor %} -->
-      </main>
-      {% block js %}
-      <script src="../../static/js/currency.js"></script>
-      {% endblock js %}
-  </div>
-</section>
 
+<section class="currency-body">
+    <div class="currency-wrapper">
+        <header class="curr-head">
+            <div class="curr-nav">
+                <h2 class="title">
+                    DIVISAS
+                </h2>
+                <div class="search-input">
+                    <div class="search-img"><i class="fas fa-search"></i></div>
+                    <input type="search" class="curr-search" placeholder="Buscar moneda">
+                </div>
+            </div>
+            <nav class="menu-list">
+                <a href="#" class="menu-element">Favoritos</a>
+                <a href="#" class="menu-element">Futuros</a>
+                <a href="#" class="menu-element">Nuevas monedas</a>
+                <a href="#" class="menu-element">Todas las monedas</a>
+            </nav>
+        </header>
+        <main class="curr-row">
+            <div class="curr-titles">
+                <p class="currency curr-element">Moneda</p>
+                <p class="value curr-element">Último precio(USDT)</p>
+                <p class="exchange curr-element">Cambio en 24H</p>
+                <p class="market curr-element">Cap. de Mercado</p>
+            </div>
+            
+            <!-- {% for dato in lista %} -->
+            <!-- {% for nombre in moneda %}    
+            {% for info in tasa %} -->
+            <div class="curr-row-element">
+                <div>
+                    <div class="curr-img">
+    
+                    </div>
+                    <p class="curr-name">{{nombre}}</p>
+                </div>  
+                
+                <div class="last-value">
+                    <p class="usdt-value">{{info}}</p>
+                    <p class="local-value">12312 ARS</p>
+                </div>
+    <!--             
+                <div>
+                    <p class="exchangePercent">{{ dato.name }}</p>
+                </div>
+                <div>
+                    <p class="marketExc">{{ dato.max_supply }}</p>
+                </div> -->
+            </div>
+            <!-- {% endfor %}
+            {% endfor %} -->
+            <!-- {% endfor %} -->
+        </main>
+        {% block js %}
+        <script src="../../static/js/currency.js"></script>
+        {% endblock js %}
+    </div>
+</section>
 
 {% endblock boody %}
