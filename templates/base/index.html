@@ -2,6 +2,7 @@
 
 {% load static %}
 
+
 {% block boody %}
 		
     <!-- ========================= hero-section start ========================= -->
@@ -160,7 +161,7 @@
 
 					<div class="col-lg-6">
 						<div class="faq-image">
-							<img src="static/img/faq/faq-img.svg" alt="">
+							<img src="{% static 'img/faq/faq-img.svg' %}" alt="">
 						</div>
 					</div>
 				</div>
@@ -169,3 +170,5 @@
 		<!-- ========================= faq-section end ========================= -->
 
 {% endblock boody %}
+
+

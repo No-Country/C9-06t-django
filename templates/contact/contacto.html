@@ -2,13 +2,13 @@
 
 {% load static %}
 
-  {% block titulo %}
-    Contacto
-  {% endblock titulo %}
+{% block titulo %}
+  Contacto
+{% endblock titulo %}
 
-  {% block static %}
+{% block static %}
 
-  {% endblock static %}
+{% endblock static %}
 
 {% block boody %}
 
@@ -25,7 +25,7 @@ class="">
                       <div class="mb-md-2">
                         <h2 class="fw-bold mb-2 text-uppercase text-white">Contacto</h2>
         
-                        <form method="POST" action="">{% csrf_token %}
+                        <form method="POST" action="">
                           
         
                           <div class="form-outline form-white mb-4">
@@ -37,7 +37,7 @@ class="">
                               placeholder="Nombre"
                               class="form-control form-control-md"
                               required 
-                            /> {{form.name}}
+                            /> 
                             
                           </div>
         
@@ -49,7 +49,7 @@ class="">
                               placeholder="Email"
                               class="form-control form-control-md"
                               required
-                            />{{form.email}} 
+                            />
                             
                           </div>
                           <div class="form-outline form-white mb-4">
@@ -60,7 +60,7 @@ class="">
                               placeholder="Asunto"
                               class="form-control form-control-md"
                               required
-                            />{{form.affair}}
+                            />
                           
                           </div>
                           <div class="form-outline form-white mb-4">
@@ -72,7 +72,7 @@ class="">
                               placeholder="Mensaje"	
                               class="form-control form-control-md"
                               required
-                            />{{form.message}}
+                            />
                            
                           </div>
                           <button class="btn btn-outline-light btn-md px-5" type="submit">Enviar</button>
@@ -86,8 +86,8 @@ class="">
           </section>
         </div>
     <!--Section: Contact v.2-->
+    
 </header>
 {% endblock boody %}
-
 
 
