@@ -1,93 +1,80 @@
-{% extends 'base.html' %}
+{% extends 'base.html' %} {% load static %} {% block titulo %} Contacto {%
+endblock titulo %} {% block static %} {% endblock static %} {% block body %}
 
-{% load static %}
+<header class="">
+  <!--Section: Contact v.2-->
+  <div class="form-register33">
+    <section class="vh-100 gradient-custom">
+      <div class="container py-4 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+          <div class="col-12 col-md-8 col-lg-6 col-xl-6 mt-5">
+            <div class="card bg-dark text-white" style="border-radius: 2rem">
+              <div class="card-body m-2 text-center">
+                <div class="mb-md-2">
+                  <h2 class="fw-bold mb-2 text-uppercase text-white">
+                    Contacto
+                  </h2>
 
-  {% block titulo %}
-    Contacto
-  {% endblock titulo %}
+                  <form method="POST" action="">
+                    {% csrf_token %}
 
-  {% block static %}
-
-  {% endblock static %}
-
-{% block boody %}
-
-<header
-class="">
-        <!--Section: Contact v.2-->
-        <div class="form-register33">
-        <section class="vh-100 gradient-custom">
-            <div class="container py-4 h-100">
-              <div class="row d-flex justify-content-center align-items-center h-100">
-                <div class="col-12 col-md-8 col-lg-6 col-xl-6 mt-5">
-                  <div class="card bg-dark text-white" style="border-radius: 2rem">
-                    <div class="card-body m-2 text-center">
-                      <div class="mb-md-2">
-                        <h2 class="fw-bold mb-2 text-uppercase text-white">Contacto</h2>
-        
-                        <form method="POST" action="">{% csrf_token %}
-                          
-        
-                          <div class="form-outline form-white mb-4">
-                            
-                            <input
-                              type="text"
-                              name="name"
-                              id="name"
-                              placeholder="Nombre"
-                              class="form-control form-control-md"
-                              required 
-                            /> {{form.name}}
-                            
-                          </div>
-        
-                          <div class="form-outline form-white mb-4 border-radius">
-                            <input
-                              type="email"
-                              name="email"
-                              id="typeEmailX"
-                              placeholder="Email"
-                              class="form-control form-control-md"
-                              required
-                            />{{form.email}} 
-                            
-                          </div>
-                          <div class="form-outline form-white mb-4">
-                            <input
-                              type="asunto"
-                              name="asunto"
-                              id="typeAsuntoX"
-                              placeholder="Asunto"
-                              class="form-control form-control-md"
-                              required
-                            />{{form.affair}}
-                          
-                          </div>
-                          <div class="form-outline form-white mb-4">
-
-                            <input
-                              type="message"
-                              name="message"
-                              id="typeMessage"
-                              placeholder="Mensaje"	
-                              class="form-control form-control-md"
-                              required
-                            />{{form.message}}
-                           
-                          </div>
-                          <button class="btn btn-outline-light btn-md px-5" type="submit">Enviar</button>
-                        </form>
-                      </div>
+                    <div class="form-outline form-white mb-4">
+                      <input
+                        type="text"
+                        name="name"
+                        id="name"
+                        placeholder="Nombre"
+                        class="form-control form-control-md"
+                        required
+                      />
+                      {{form.name}}
                     </div>
-                  </div>
+
+                    <div class="form-outline form-white mb-4 border-radius">
+                      <input
+                        type="email"
+                        name="email"
+                        id="typeEmailX"
+                        placeholder="Email"
+                        class="form-control form-control-md"
+                        required
+                      />{{form.email}}
+                    </div>
+                    <div class="form-outline form-white mb-4">
+                      <input
+                        type="asunto"
+                        name="asunto"
+                        id="typeAsuntoX"
+                        placeholder="Asunto"
+                        class="form-control form-control-md"
+                        required
+                      />{{form.affair}}
+                    </div>
+                    <div class="form-outline form-white mb-4">
+                      <input
+                        type="message"
+                        name="message"
+                        id="typeMessage"
+                        placeholder="Mensaje"
+                        class="form-control form-control-md"
+                        required
+                      />{{form.message}}
+                    </div>
+                    <button
+                      class="btn btn-outline-light btn-md px-5"
+                      type="submit"
+                    >
+                      Enviar
+                    </button>
+                  </form>
                 </div>
               </div>
             </div>
-          </section>
+          </div>
         </div>
-    <!--Section: Contact v.2-->
+      </div>
+    </section>
+  </div>
+  <!--Section: Contact v.2-->
 </header>
-{% endblock boody %}
-
-
-
+{% endblock body %}
