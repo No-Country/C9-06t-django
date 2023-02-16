@@ -1,23 +1,17 @@
 {% extends 'base.html' %}
 {% load static %}
-<title>{% block titulo %} Badge{% endblock titulo %}</title>
 
+{% block titulo %} Badge{% endblock titulo %}
 {% block static %}
-<link rel="stylesheet" href="{% static 'css/currency.css' %}">
-<link rel="stylesheet" href="{% static 'css/normalize.css' %}">
-<script src="https://kit.fontawesome.com/002c590bf1.js" crossorigin="anonymous"></script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/currency.css' %}">
+    <link rel="stylesheet" href="{% static 'css/normalize.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,300&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/002c590bf1.js" crossorigin="anonymous"></script>
 {% endblock static %}
 
-   
 {% block boody %}
-      
-
-<body class="currency-body">
-    
-    
     <header class="curr-head">
         <div class="curr-nav">
             <h2 class="title">
@@ -42,36 +36,39 @@
             <p class="exchange curr-element">Cambio en 24H</p>
             <p class="market curr-element">Cap. de Mercado</p>
         </div>
+
+{% for a in tasa %}
+    
+{% for b in moneda %}
         
-        <!-- {% for dato in lista %} -->
-        {% for nombre in moneda %}    
-        {% for info in tasa %}
+{% for c in crypto %}
+
         <div class="curr-row-element">
             <div>
                 <div class="curr-img">
-
+                    <img src="{{ crypto.icon_url }}" alt="">
                 </div>
-                <p class="curr-name">{{nombre}}</p>
-            </div>  
+                <p class="curr-name">{{ a }}</p>
+            </div>
             
             <div class="last-value">
-                <p class="usdt-value">{{info}}</p>
+                <p class="usdt-value">{{ b }}</p>
                 <p class="local-value">12312 ARS</p>
             </div>
-<!--             
+        
             <div>
-                <p class="exchangePercent">{{ dato.name }}</p>
+                <p class="exchangePercent"></p>
             </div>
+
             <div>
-                <p class="marketExc">{{ dato.max_supply }}</p>
-            </div> -->
+                <p class="marketExc">{{ crypto.max_supply }}</p>
+            </div>
         </div>
-        {% endfor %}
-        {% endfor %}
-        <!-- {% endfor %} -->
-    </main>
-    {% block js %}
-    <script src="./assets/js/currency.js"></script>
-    {% endblock js %}
-</body>
+
+{% endfor %}
+            
+{% endfor %}
+        
+{% endfor %}
+    <script src="{% static 'js/currency.js' %}"></script>
 {% endblock boody %}
