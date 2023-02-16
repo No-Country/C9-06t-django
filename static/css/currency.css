@@ -1,30 +1,26 @@
-* {
-    font-family: 'Roboto Flex', sans-serif;
-}
-
 :root {
     --main-color: #9CCD62;
     --font-color: #3C3D42;
     --borders: #f1f1f1;
 }
 
-html {
+.currency-body {
     display:flex;
     justify-content: center;
     align-items: start;
-    height: 100vh;
+    margin-top: 15vh;
+    font-family: 'Roboto Flex', sans-serif;
+    height: 85vh;
 }
 
-input[type="search"]::-webkit-search-decoration,
-input[type="search"]::-webkit-search-cancel-button,
-input[type="search"]::-webkit-search-results-button,
-input[type="search"]::-webkit-search-results-decoration {
+.curr-search::-webkit-search-decoration,
+.curr-search::-webkit-search-cancel-button,
+.curr-search::-webkit-search-results-button,
+.curr-search::-webkit-search-results-decoration {
   -webkit-appearance:none;
 }
 
-
-
-.currency-body {
+.currency-wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
