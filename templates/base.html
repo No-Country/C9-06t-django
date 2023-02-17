@@ -10,21 +10,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!-- Create favicon -->
     <link rel="apple-touch-icon" sizes="152x152" href="/static/img/logo/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/static/img/logo/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/static/img/logo/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/static/img/logo/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/static/img/logo/favicon-16x16.png">
 
     <!-- Place favicon.ico in the root directory -->
 
     <!-- ========================= CSS here ========================= -->
 
-    <link
-      rel="stylesheet"
-      href="{% static 'css/bootstrap-5.0.0-beta2.min.css' %}"
-    />
+    <link rel="stylesheet" href="{% static 'css/bootstrap-5.0.0-beta2.min.css' %}" />
     <link rel="stylesheet" href="{% static 'css/LineIcons.2.0.css' %}" />
     <link rel="stylesheet" href="{% static 'css/tiny-slider.css' %}" />
     <link rel="stylesheet" href="{% static 'css/animate.css' %}" />
     <link rel="stylesheet" href="{% static 'css/main.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/scrolltop.css' %}">
     {% block static %} {% endblock static %}
   </head>
   <body>
@@ -60,36 +58,36 @@
                 >
                   <ul id="nav" class="navbar-nav ms-auto">
                     <li class="nav-item">
-                      <a class="" href="{% url 'home' %}">Inicio</a>
+                      <a class="inicio" href="{% url 'home' %}">Inicio</a>
                     </li>
                     <li class="nav-item">
-                      <a class="" href="{% url 'badge' %}">Divisas</a>
+                      <a class="divisas" href="{% url 'badge' %}">Divisas</a>
                     </li>
                     <li class="nav-item">
 
                       <!-- ? En esta parte necesitamos que valide si estamos en home o no, en caso de que si funciona como una # normal, pero en caso de que no necesitamos volver a home -->
                       
-                      <a class="" href="#calculadora">Calculadora</a>
+                      <a class="calculadora" href="#calculadora">Calculadora</a>
                     </li>
                     <li class="nav-item">
-                      <a class="" href="{% url 'contacto' %}">Contacto</a>
+                      <a class="contacto" href="{% url 'contacto' %}">Contacto</a>
                     </li>
                     {% if request.user.is_authenticated %}
                     <li class="nav-item">
-                      <a class=""
+                      <a class="saludo"
                         >Hola, {{ request.user.first_name }}
                         {{request.user.last_name}}</a
                       >
                     </li>
                     <li class="nav-item">
-                      <a class="" href="{% url 'logout' %}">Cerrar Sesión</a>
+                      <a class="cerrar-sesion" href="{% url 'logout' %}">Cerrar Sesión</a>
                     </li>
                     {% else %}
                     <li class="nav-item">
-                      <a class="" href="{% url 'login' %}">Iniciar Sesión</a>
+                      <a class="iniciar-sesion" href="{% url 'login' %}">Iniciar Sesión</a>
                     </li>
                     <li class="nav-item">
-                      <a class="" href="{% url 'register' %}">Registrarse</a>
+                      <a class="registrarse" href="{% url 'register' %}">Registrarse</a>
                     </li>
                     {% endif %}
                   </ul>
@@ -106,6 +104,7 @@
       <!-- navbar area -->
     </header>
     <!-- ========================= header end ========================= -->
+
 
     {% block boody %} {% endblock boody %}
 
@@ -155,15 +154,18 @@
     </footer>
     <!-- ========================= footer end ========================= -->
 
-    <!-- ========================= scroll-top ========================= -->
+    <!-- ========================= Scroll top start ========================= -->
+    <button class="scrollTop-button">⬆</button>
+    <!-- ========================= Scroll top end ========================= -->
 
     <!-- ========================= JS here ========================= -->
     <script src="{% static 'js/bootstrap-5.0.0-beta2.min.js' %}"></script>
     <script src="{% static 'js/tiny-slider.js' %}"></script>
     <script src="{% static 'js/wow.min.js' %}"></script>
     <script src="{% static 'js/polifill.js' %}"></script>
-    <script src="{% static 'js/main.js' %}"></script>
-
+    <script src="{% static 'js/main.js' %}"></script> <!-- si se rompe algo es por esta linea -->
+    <script src="{% static 'js/hoverEffect.js' %}"></script>
+    <script src="{% static 'js/scrolltop.js' %}"></script>
     {% block js %} {% endblock js %}
   </body>
 </html>
