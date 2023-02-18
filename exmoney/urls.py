@@ -10,6 +10,7 @@ urlpatterns = [
     path('', include('apps.contact.urls')),
     path('', include('apps.convert.urls')),
     path('', include('apps.badge.urls')),
+    path('', include('apps.news.urls')),
 
 
 ]
