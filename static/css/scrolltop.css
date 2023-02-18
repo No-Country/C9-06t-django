@@ -7,7 +7,7 @@
     width:60px;
     height:60px;
     bottom:40px;
-    right:120px;
+    right:5vw;
     background-color:#739E40;
     color:#FFF;
     border-radius:50px;
@@ -20,7 +20,6 @@
   }
   
   .scrollTop-button:hover{
-    cursor:pointer;
-    color:#000;
+    background-color: #1a1a1a;
   }
   

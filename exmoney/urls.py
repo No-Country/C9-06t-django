@@ -10,9 +10,8 @@ urlpatterns = [
     path('', include('apps.contact.urls')),
     path('', include('apps.convert.urls')),
     path('', include('apps.badge.urls')),
-    path('', include('apps.news.urls')),
-
-
+    path('', include('apps.news.urls'))
+    
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
