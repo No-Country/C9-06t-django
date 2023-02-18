@@ -15,3 +15,20 @@ def home(request):
     return render(request, 'base/index.html', context)
 
 
+def sercicios(request):
+    contex = {}
+
+    return render(request, 'base/servicios.html',contex)
+
+def soporte(request):
+    contex = {}
+
+    return render(request, 'base/soporte.html',contex)
+
+def empresa(request):
+    contex = {}
+
+    return render(request, 'base/empresa.html',contex)
+
+
+

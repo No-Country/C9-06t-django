@@ -1,13 +1,14 @@
+
 from django.db import models
 
 # Create your models here.
 
-class ContactModel(models.Model):
-    name = models.CharField('Nombre', max_length=50)
-    email = models.EmailField('Gmail', max_length=254)
-    affair = models.CharField('Asunto', max_length=50)
-    message = models.TextField('Mensaje',  max_length=50)
+class ContactoModel(models.Model):
+    nombre = models.CharField('Nombre', max_length=50)
+    email = models.EmailField('Email', max_length=254)
+    asunto = models.CharField('Asunto', max_length=50)
+    mensaje = models.TextField()
 
     def __str__(self):
 
-        return self.name + ' ' + self.affair
+        return self.nombre + self.asunto

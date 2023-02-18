@@ -22,10 +22,10 @@
 
         if (window.pageYOffset > sticky) {
             header_navbar.classList.add("sticky");
-            logo.src = 'static/img/logo/logo-2.svg';
+            logo.src = '/static/img/logo/logo-2.svg';
         } else {
             header_navbar.classList.remove("sticky");
-            logo.src = 'static/img/logo/logo.png';
+            logo.src = '/static/img/logo/logo.png';
         }
 
 

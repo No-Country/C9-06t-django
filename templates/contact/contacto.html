@@ -1,71 +1,58 @@
-{% extends 'base.html' %} {% load static %} {% block titulo %} {% endblock titulo %} Contacto {%
-endblock titulo %} {% block static %} {% endblock static %} {% block body %}
+{% extends 'base.html' %}
 
 
-  <!--Section: Contact v.2-->
+{% block titulo %}
+  Contacto
+{% endblock titulo %}
 
-    <section class="vh-100 gradient-custom pt-60">
-      <div class="container py-4 h-100">
-        <div class="row d-flex justify-content-center align-items-center h-100">
-          <div class="col-12 col-md-8 col-lg-6 col-xl-6 mt-5">
-            <div class="card bg-dark text-white" style="border-radius: 2rem">
-              <div class="card-body m-2 text-center">
-                <div class="mb-md-2">
-                  <h2 class="fw-bold mb-2 text-uppercase text-white">
-                    Contacto
-                  </h2>
+{% block static %}
 
-                  <form method="POST" action="">
-                    {% csrf_token %}
+{% endblock static %}
+<!-- Lsito Pense que eran los static pero no. -->
+{% block boody %}
 
-                    <div class="form-outline form-white mb-4">
-                      <input
-                        type="text"
-                        name="name"
-                        id="name"
-                        placeholder="Nombre"
-                        class="form-control form-control-md"
-                        required
-                      />
-                      {{form.name}}
+        <!--Section: Contact v.2-->
+        <div class="form-register33 h-100">
+        <section class="vh-100 gradient-custom">
+            <div class="container py-4 h-100 position-rela zindex-dropdown">
+              <div class="row d-flex justify-content-center align-items-center h-100">
+                <div class="col-12 col-md-8 col-lg-6 col-xl-6">
+                  <div class="card bg-dark text-white" style="border-radius: 2rem">
+                    <div class="card-body m-2 text-center">
+                      <div class="mb-md-2">
+                        <h2 class="fw-bold mb-2 text-uppercase text-white">Contacto</h2>
+       
+                        <form method="POST" action="">{% csrf_token %}
+                          
+        
+                          <div class="form-outline form-white mb-4">
+                            <label class="form-label">Nombre</label>
+                            {{form.nombre}}
+                          </div>
+        
+                          <div class="form-outline form-white mb-4 required">
+                            <label class="form-label">Email</label>
+                            {{form.email}}
+        
+                          </div>
+                          <div class="form-outline form-white mb-4 required">
+                            <label class="form-label">Asunto</label>
+                            {{form.asunto}}
+        
+                          </div>
+                          </div>
+                          <div class="form-outline form-white mb-4 required">
+                            <label class="form-label">Mensaje</label>
+                            {{form.mensaje}}
+        
+                          </div>
+                          <div class="mt-4 text-center">
+ 
+                          </div>
+                          <button class="btn btn-outline-light btn-md px-5" type="submit">Enviar</button>
+                        </form>
+                      </div>
                     </div>
-
-                    <div class="form-outline form-white mb-4 border-radius">
-                      <input
-                        type="email"
-                        name="email"
-                        id="typeEmailX"
-                        placeholder="Email"
-                        class="form-control form-control-md"
-                        required
-                      />{{form.email}}
-                    </div>
-                    <div class="form-outline form-white mb-4">
-                      <input
-                        type="asunto"
-                        name="asunto"
-                        id="typeAsuntoX"
-                        placeholder="Asunto"
-                        class="form-control form-control-md"
-                        required
-                      />{{form.affair}}
-                    </div>
-                    <div class="form-outline form-white mb-4">
-                      <input
-                        type="message"
-                        name="message"
-                        id="typeMessage"
-                        placeholder="Mensaje"
-                        class="form-control form-control-md"
-                        required
-                      />{{form.message}}
-                    </div>
-                    <button
-                      class="btn btn-outline-light btn-md px-5"
-                      type="submit"
-                    >
-                      Enviar
-                    </button>
                   </form>
                 </div>
               </div>
@@ -74,6 +61,8 @@ endblock titulo %} {% block static %} {% endblock static %} {% block body %}
         </div>
       </div>
     </section>
+  </div>
   <!--Section: Contact v.2-->
 
-{% endblock body %}
+{% endblock boody %}
+{% block js %} {% endblock js %}

@@ -4,7 +4,7 @@ from . import views
 urlpatterns = [
     path(
         'contact/',
-        views.ContacCreateView.as_view(),
+        views.NewConcatoView.as_view(),
         name="contacto"
     ),
 ]
