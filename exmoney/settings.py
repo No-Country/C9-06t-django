@@ -74,23 +74,23 @@ WSGI_APPLICATION = 'exmoney.wsgi.application'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
-
 # DATABASES = {
 #     'default': {
-#         'ENGINE': 'django.db.backends.mysql',
-#         'NAME':'exmoneydb',
-#         'USER' : 'root',
-#         'PASSWORD' : '',
-#         'HOSTR':'127.0.0.1',
-#         'PORT' : 3306,
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
 #     }
 # }
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME':'exmoneydb',
+        'USER' : 'root',
+        'PASSWORD' : '',
+        'HOSTR':'127.0.0.1',
+        'PORT' : 3306,
+    }
+}
 
 
 # Password validation
@@ -142,3 +142,6 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'static/images')
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+os.environ["DJANGO_ALLOW_ASYNC_UNSAFE"] = "true"
