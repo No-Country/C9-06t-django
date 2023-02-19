@@ -18,7 +18,7 @@
     d.addEventListener("DOMContentLoaded", (e)=>{
 
         $menu.forEach(item => {
-            if(w.location.href.toString().includes(`${item}`)){
+            if(w.location.href.toString().includes(`${item}`) && item.className !== 'saludo' ){
                 $menu[0].classList.remove("active");
                 item.classList.add("active");
             }

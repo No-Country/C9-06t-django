@@ -532,6 +532,9 @@ p {
     color: #60698D;
   }
 }
+.navbar-nav .nav-item .saludo::before {
+  display: none;
+}
 
 .navbar-nav .nav-item a::before {
   content: '';
@@ -546,6 +549,7 @@ p {
   z-index: -1;
   opacity: 0;
 }
+
 
 @media only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
   .navbar-nav .nav-item a::before {
