@@ -1,5 +1,3 @@
-{% extends 'base.html' %} {% load static %} {% block titulo %} {% endblock titulo %} Contacto {%
-    endblock titulo %} {% block static %} {% endblock static %} {% block body %}
 
 <div class="container-profile">
     <div class="profile-image">
@@ -22,7 +20,7 @@
         </div>
         <div class="form-group">
           <label for="phone" class="profile_details_text">Telefono:</label>
-          <input type="tel" id="phone" name="phone" class="form-control" value="" required pattern="[0-9]{10}">
+          <input type="tel" id="phone" name="phone" class="form-control" value="" requir ed pattern="[0-9]{10}">
         </div>
         <div class="form-group">
           <label for="birthday" class="profile_details_text">Nacimiento:</label>
@@ -47,4 +45,3 @@
     </div>
   </div>
 
-{% endblock body %}
