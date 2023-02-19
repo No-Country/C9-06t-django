@@ -40,6 +40,8 @@ const data = {
     "ZAR": "Rand sudafricano"
 };
 
+//for values in english (it requires to comment the content above this)
+
 // fetch('https://api.frankfurter.app/currencies')
 //   .then((data) => data.json())
 //   .then((data) => {
@@ -62,7 +64,7 @@ document.addEventListener('click', (e)=>{
     let aux = $select[0].value;
     let value1 = amount1.value;
     
-    if(e.target.matches('.swap-button')){
+    if(e.target.matches('.swap-button') || e.target.matches('.exchange-icon')){
         $select[0].value = $select[1].value;
         $select[1].value = aux;
         currency1 = $select[1].value;
@@ -72,7 +74,7 @@ document.addEventListener('click', (e)=>{
         currency2 = $select[1].value;
     }
 
-    if(e.target.matches('.calculator-button')){   
+    if(e.target.matches('.calculator-button') || e.target.matches('.calcular-button-text')){   
         if (value1 && currency1 !== currency2) {
             amount1.style.outline="none";
             $select[0].style.outline="none";
