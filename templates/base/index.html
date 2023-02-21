@@ -1,5 +1,10 @@
 {% extends 'base.html' %} {% load static %} {% block boody %}
 
+{% block static %} 
+<link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet" /> 
+<link rel="stylesheet" href="{% static 'css/chart.css' %}">
+{% endblock static %}
+
 <!-- ========================= hero-section start ========================= -->
 <section id="home" class="hero-section">
   <div class="container">
@@ -59,10 +64,6 @@
 </section>
 <!-- ========================= client-logo-section end ========================= -->
 <div class="wrapper">
-  <div class="chart-container">
-    <h2 class="chart-title">Tendencia de cambio de divisas</h2>
-    <canvas class="chart" id="currency-chart"></canvas>
-  </div>
   <div class="calculator-container">
     <div class="calculator">
       <h2 class="calculator-title">Conversor de divisas</h2>
@@ -71,9 +72,9 @@
           <label class="calculator-label" for="currency-1">Monto:</label>
           <div class="label-wrapper">
             <input class="calculator-input" type="number" placeholder="0" id="amount-1" />
-            <select name="currency" class="calculator-select" id="currency-1""></select>
+            <select name="currency" class="calculator-select" id="currency-1"></select>
             <button class="swap-button"><i class="fas fa-exchange-alt exchange-icon"></i></button>
-            <select name="currency" class="calculator-select" id="currency-2""></select>
+            <select name="currency" class="calculator-select" id="currency-2"></select>
           </div>
         </div>
         <div class="calculator-form-group">
@@ -91,6 +92,30 @@
           </p>
         </button>
       </div>
+    </div>
+  </div>
+  <div class="chart-container">
+    <h2 class="chart-title">Tendencia de cambio de divisas</h2>
+    <canvas class="chart" id="currency-chart"></canvas>
+    <div class="chart-dates-buttons">
+      <button class="chart-dates">
+        5 DIAS
+      </button>
+      <button class="chart-dates">
+        1 MES
+      </button>
+      <button class="chart-dates">
+        6 MESES
+      </button>
+      <button class="chart-dates">      
+        1 AÑO
+      </button>
+      <button class="chart-dates">
+        5 AÑOS
+      </button>
+      <button class="chart-dates">
+        MAX
+      </button>
     </div>
   </div>
 </div>
@@ -134,7 +159,7 @@
       <div class="col-lg-4 col-md-8 col-sm-10">
         <div class="single-feature">
           <div class="icon color-1">
-            <i class="lni lni-pointer-up"></i>
+            <i class="lni lni-checkmark"></i>
           </div>
           <div class="content">
             <h3>Fácil de usar</h3>
@@ -162,7 +187,7 @@
       <div class="col-lg-4 col-md-8 col-sm-10">
         <div class="single-feature">
           <div class="icon color-3">
-            <i class="lni lni-sthethoscope"></i>
+            <i class="lni lni-invest-monitor"></i>
           </div>
           <div class="content">
             <h3>Información al momento</h3>
@@ -322,6 +347,10 @@
 {% block js %}
   <script src="{% static 'js/calculator.js' %}"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.0/dist/chart.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/moment@^2"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-moment@^1"></script>
+  <script src="{% static 'js/chart.js' %}"></script>
   <script src="https://kit.fontawesome.com/002c590bf1.js" crossorigin="anonymous"></script>
 {% endblock js %}
   <!-- ========================= faq-section end ========================= -->

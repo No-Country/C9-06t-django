@@ -1,4 +1,4 @@
-const $select = document.querySelectorAll('.calculator-select');
+let $select = document.querySelectorAll('.calculator-select');
 const amount1 = document.getElementById('amount-1');
 const amount2 = document.getElementById('amount-2');
 const button = document.querySelector('.calculator-button');
@@ -51,7 +51,11 @@ const data = {
 function display(data) {
   const entries = Object.entries(data);
   for (let i = 0; i < entries.length; i++) {
-    $select[0].innerHTML += `<option value="${entries[i][0]}">${entries[i][1]} (${entries[i][0]})</option>`;
+    if(i===29){
+        $select[0].innerHTML += `<option value="${entries[i][0]}" selected>${entries[i][1]} (${entries[i][0]})</option>`;
+    } else {
+        $select[0].innerHTML += `<option value="${entries[i][0]}">${entries[i][1]} (${entries[i][0]})</option>`;
+    }
     $select[1].innerHTML += `<option value="${entries[i][0]}">${entries[i][1]} (${entries[i][0]})</option>`;
   }
 }

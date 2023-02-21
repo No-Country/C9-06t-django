@@ -914,29 +914,13 @@ header {
   background-color: #1a1a1a;
 }
 
-.chart-container {
-  background-color: #f2f2f2;
-  padding: 40px;
-  border-radius: 20px;
-  width: 100%;
-}
-
-.chart-title {
-  margin-bottom: 3rem;
-  text-align: center;
-}
-
-.chart {
-  max-width: 500px;
-  width: 100%;
-}
-
 .wrapper {
   margin-top: 2rem;
   padding: 3rem;
   display: flex;
   flex-direction: row;
   align-items:stretch;
+  text-align: center;
   gap:2rem;
   justify-content: center;
   flex-wrap: wrap;
@@ -946,12 +930,6 @@ header {
   flex: 0 0 50%;
   max-width: 50%;
 } */
-
-.chart-container {
-  flex: 0 0 50%;
-  max-width: 50%;
-  text-align: right;
-}
 
 
 .hero-section .hero-img .img-3 {
@@ -2077,29 +2055,18 @@ header {
     width: 100%;
 
   }
-  
-  .chart-container {
-    order: 1;
-    display: contents;
-    width: 100%;
-  }
 }
 
 @media only screen and (min-width: 768px) {
   .wrapper {
     display: flex;
   }
-/*   
+}
+  /*   
   .calculator {
     order: 1;
     width: 50%;
   } */
-  
-  .chart-container {
-    order: 2;
-    width: 50%;
-  }
-}
 
 .container-profile {
   width: 80%;
