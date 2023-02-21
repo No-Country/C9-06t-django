@@ -18,12 +18,12 @@ def home(request):
 def sercicios(request):
     contex = {}
 
-    return render(request, 'base/servicios.html',contex)
+    return render(request, 'base/services.html',contex)
 
 def soporte(request):
     contex = {}
 
-    return render(request, 'base/soporte.html',contex)
+    return render(request, 'base/support.html',contex)
 
 def empresa(request):
     contex = {}

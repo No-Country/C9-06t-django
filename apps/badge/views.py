@@ -3,38 +3,32 @@ from django.http import HttpResponse
 import aiohttp
 import asyncio
 
- 
-def users(request):
-    context = {}
 
-    return render(request, 'badge/badge.html', context)
-
-
-# async def values(request):
+# async def live(request):
     
 #     async with aiohttp.ClientSession() as session:
 #         async with aiohttp.ClientSession() as session2:
-#             async with session.get('http://api.coinlayer.com/live?access_key=7c7def6ef40f79c9ee415edba2850178', ) as resp:
-#                 async with session2.get('http://api.coinlayer.com/list?access_key=7c7def6ef40f79c9ee415edba2850178', ) as respo2:
-#                     if resp.status and respo2.status == 200:
+#             async with session.get('http://api.coinlayer.com/live?access_key=ab2978034ee6b835f2e20c4c75a4f51b', ) as resp:
+#                     if resp.status == 200:
 #                         data = await resp.json()
+#                         a = data['rates']
+#                     return render(request, 'badge/live.html',{'live':a })  
+
+# async def list(request):
+#     async with aiohttp.ClientSession() as session2:
+#        async with session2.get('http://api.coinlayer.com/list?access_key=ab2978034ee6b835f2e20c4c75a4f51b', ) as respo2:
+#                     if respo2.status  == 200:
 #                         data2 = await respo2.json()
-#                         a = data['rates']
-#                         b = data2['crypto']
-#                         print (b)
-                        
-#                     return render(request, 'badge/badge.html',{'tasa':a, 'data' :  b } )  
-                
+#                         b = data2['crypto']  
+#                     return render(request, 'badge/list.html',{'list':b  }) 
+                             
 
-
-# async def values(request):
-#     async with aiohttp.ClientSession() as session:
-#         async with session.get('http://api.coinlayer.com/live?access_key=7c7def6ef40f79c9ee415edba2850178&expand=1', ) as resp:
-#                     if resp.status  == 200:
-#                         data = await resp.json()
-#                         a = data['rates']
-
-                        
-#                     return render(request, 'badge/badge.html',{'tasa':a} )  
+# async def expand(request):
+#     async with aiohttp.ClientSession() as session3:
+#         async with session3.get('http://api.coinlayer.com/live?access_key=ab2978034ee6b835f2e20c4c75a4f51b&expand=1', ) as resp3:
+#                     if resp3.status  == 200:
+#                         data3 = await resp3.json()
+#                         c = data3['rates']
+#                     return render(request, 'badge/expand.html',{'expand':c } )  
                 
 

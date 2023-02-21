@@ -37,7 +37,7 @@ def registerPage(request):
 
 def upgrade(request):
         
-    usuario = request.user # Devuelve un solo registro.
+    users = request.user # Devuelve un solo registro.
 
     if request.method == "POST" :
         
@@ -47,12 +47,12 @@ def upgrade(request):
 
             data = form.cleaned_data # cleaned_da es donde se guarda la iinfo.
 
-            usuario.first_name = data["first_name"]
-            usuario.last_name = data["last_name"]
-            usuario.email = data["email"]
+            users.first_name = data["first_name"]
+            users.last_name = data["last_name"]
+            users.email = data["email"]
 
 
-            usuario.save() # Guardamos el formulario.
+            users.save() # Guardamos el formulario.
 
             form = UserEditForm(instance=request.user)
 
