@@ -35,7 +35,8 @@ INSTALLED_APPS = [
     'apps.contact',
     'apps.convert',
     'apps.badge',
-    'apps.news'
+
+
 ]
 
 MIDDLEWARE = [
@@ -73,23 +74,23 @@ WSGI_APPLICATION = 'exmoney.wsgi.application'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
-
 # DATABASES = {
 #     'default': {
-#         'ENGINE': 'django.db.backends.mysql',
-#         'NAME':'exmoneydb',
-#         'USER' : 'root',
-#         'PASSWORD' : '',
-#         'HOSTR':'127.0.0.1',
-#         'PORT' : 3306,
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
 #     }
-#}
+# }
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME':'exmoneydb',
+        'USER' : 'root',
+        'PASSWORD' : '',
+        'HOSTR':'127.0.0.1',
+        'PORT' : 3306,
+    }
+}
 
 
 # Password validation
@@ -114,7 +115,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/3.2/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'es-es'
 
 TIME_ZONE = 'UTC'
 

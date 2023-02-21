@@ -1,12 +1,16 @@
 from django import forms
-from django.forms import ModelForm, TextInput, EmailInput
 
-from apps.contact.models import ContactoModel
-
-class ContactoForms(forms.Form):
-    nombre = forms.CharField(label='Your name')
-    email = forms.EmailField()
-    asunto = forms.CharField()
-    mensaje = forms.CharField()
+from apps.contact.models import ContactModel
 
 
+class ContacForm(forms.ModelForm):
+
+    class Meta:
+        model = ContactModel
+        fields = (
+            'name',
+            'email',
+            'affair',
+            'message',
+            'importance',
+        )

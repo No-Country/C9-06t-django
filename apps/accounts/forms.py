@@ -1,5 +1,5 @@
 from django.forms import ModelForm, TextInput, EmailInput
-from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.forms import UserCreationForm, UserChangeForm
 from django.contrib.auth.models import User
 from django import forms
 
@@ -26,7 +26,7 @@ class CreateUserForm(UserCreationForm):
         fields = ['username', 'first_name', 'last_name', 'email']
         widgets = {
             'username': TextInput(attrs={
-                'class': "form-control form-control-md"}),
+                'class': "form-control form-control-md",}),
             'first_name': TextInput(attrs={
                 'class': "form-control form-control-md"}),
             'last_name': TextInput(attrs={
@@ -34,3 +34,32 @@ class CreateUserForm(UserCreationForm):
             'email': EmailInput(attrs={
                 'class': "form-control form-control-md"}),
         }
+
+
+class UserEditForm(UserChangeForm):
+
+    password = forms.CharField(
+    help_text="",
+    widget=forms.HiddenInput(), required=False
+    )
+
+    password1 = forms.CharField(label="Contraseña", widget=forms.PasswordInput)
+    password2 = forms.CharField(label="Repetir Contraseña", widget=forms.PasswordInput)
+
+    class Meta:
+
+        model = User
+        fields = ['email','first_name','last_name']
+
+    #Verificacion
+
+    def clean_password2(self):
+        
+        password2 = self.cleaned_data["password2"]
+        password1 = self.cleaned_data["password1"]
+
+        if password2 != password1:
+            raise forms.ValidationError("Las contraseñas no coinciden!")
+        
+        return password2
+    

@@ -69,25 +69,37 @@
                       
                       <a class="calculadora" href="#calculadora">Calculadora</a>
                     </li>
+
+                    {% if request.user.is_authenticated %}
                     <li class="nav-item">
                       <a class="contacto" href="{% url 'contacto' %}">Contacto</a>
                     </li>
-                    {% if request.user.is_authenticated %}
+
                     <li class="nav-item">
+                      <a class="cerrar-sesion" href="{% url 'upgrade' %}">Editar Usuario</a>
                       <a class="saludo"
                         >Hola, {{ request.user.first_name }}
                         {{request.user.last_name}}</a>
                     </li>
+
                     <li class="nav-item">
                       <a class="cerrar-sesion" href="{% url 'logout' %}">Cerrar Sesión</a>
                     </li>
+
+                    <li class="">
+                      <a class="saludo">Bienvenido {{ request.user.username }}</a>                    
+                    </li>
+
                     {% else %}
+
                     <li class="nav-item">
                       <a class="iniciar-sesion" href="{% url 'login' %}">Iniciar Sesión</a>
                     </li>
+
                     <li class="nav-item">
                       <a class="registrarse" href="{% url 'register' %}">Registrarse</a>
                     </li>
+                    
                     {% endif %}
                   </ul>
                 </div>
