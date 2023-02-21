@@ -18,9 +18,9 @@
 #### Emanuel Manrique | <a href="https://www.linkedin.com/in/emanuel-manrique-dev/"> <img width="18px" align="center" src="https://raw.githubusercontent.com/rahulbanerjee26/githubAboutMeGenerator/main/icons/linked-in-alt.svg" style="max-width: 100%;"> <a href="https://www.github.com/Lu-deng"><img width="18px" align="center" src="https://raw.githubusercontent.com/rahulbanerjee26/githubAboutMeGenerator/main/icons/github.svg" style="max-width: 100%;"></a>
 
 #### Victor Uroza |<a href="https://www.linkedin.com/in/vuroza/" rel="nofollow"> <img width="18px" align="center" src="https://raw.githubusercontent.com/rahulbanerjee26/githubAboutMeGenerator/main/icons/linked-in-alt.svg" style="max-width: 100%;"><a href="https://www.twitter.com/Dev_Vikk" rel="nofollow"> <img width="18px" align="center" src="https://raw.githubusercontent.com/rahulbanerjee26/githubAboutMeGenerator/main/icons/twitter.svg" style="max-width: 100%;"></a> <a href="https://www.github.com/viktorkrill"> <img width="18px" align="center" src="https://raw.githubusercontent.com/rahulbanerjee26/githubAboutMeGenerator/main/icons/github.svg" style="max-width: 100%;"></a>
-#### Backend
-**Billy Campagnoli
-Agustin Ribotta
-Gonzalo Fuente**
 
-Link Proyecto
+### Backend
+#### Billy Campagnoli | <a href="https://www.linkedin.com/in/billy-campagnoli-221621223/"> <img width="18px" align="center" src="https://raw.githubusercontent.com/rahulbanerjee26/githubAboutMeGenerator/main/icons/linked-in-alt.svg" style="max-width: 100%;"> <a href="https://www.github.com/Bfix40"> <img width="18px" align="center" src="https://raw.githubusercontent.com/rahulbanerjee26/githubAboutMeGenerator/main/icons/github.svg" style="max-width: 100%;"></a>
+
+
+#### Agustin Ribotta | <a href="https://www.linkedin.com/in/agustin-ribotta-04043820b/"> <img width="18px" align="center" src="https://raw.githubusercontent.com/rahulbanerjee26/githubAboutMeGenerator/main/icons/linked-in-alt.svg" style="max-width: 100%;"> <a href="https://www.github.com/AgustinRibotta"> <img width="18px" align="center" src="https://raw.githubusercontent.com/rahulbanerjee26/githubAboutMeGenerator/main/icons/github.svg" style="max-width: 100%;"></a>
