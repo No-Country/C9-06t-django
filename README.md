@@ -10,6 +10,9 @@
 
 **La seguridad es una de las principales preocupaciones de Exmoney, por lo que la plataforma utiliza las últimas tecnologías de encriptación y autenticación para garantizar que las transacciones sean seguras y protegidas. Los usuarios pueden estar seguros de que sus fondos y datos personales están protegidos por múltiples capas de seguridad.**
 
+## Stack
+<a href="#"> <img width="50px" align="center" src="https://raw.githubusercontent.com/rahulbanerjee26/githubAboutMeGenerator/main/icons/css.svg" style="max-width: 100%;"></a> <a href="#"> <img width="50px" align="center" src="https://raw.githubusercontent.com/rahulbanerjee26/githubAboutMeGenerator/main/icons/html.svg" style="max-width: 100%;"></a> <a href="#"> <img width="50px" align="center" src="https://raw.githubusercontent.com/rahulbanerjee26/githubAboutMeGenerator/main/icons/javascript.svg" style="max-width: 100%;"></a> <a href="#"> <img width="70px" align="center" src="https://raw.githubusercontent.com/rahulbanerjee26/githubAboutMeGenerator/main/icons/django.svg" style="max-width: 100%;"></a> <a href="#"> <img width="60px" align="center" src="https://raw.githubusercontent.com/rahulbanerjee26/githubAboutMeGenerator/main/icons/bootstrap.svg" style="max-width: 100%;"></a> 
+
 ## Autores 👨🏼‍💻
 ### Frontend 🎨
 #### Gonzalo Balboa | <a href="https://linkedin.com/in/gonzalo-david-balboa-0a234522a"> <img width="18px" align="center" src="https://raw.githubusercontent.com/rahulbanerjee26/githubAboutMeGenerator/main/icons/linked-in-alt.svg" style="max-width: 100%;"> <a href="https://www.github.com/ezkript"> <img width="18px" align="center" src="https://raw.githubusercontent.com/rahulbanerjee26/githubAboutMeGenerator/main/icons/github.svg" style="max-width: 100%;"></a>
