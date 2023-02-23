@@ -3,17 +3,6 @@ from django.http import HttpResponse
 import aiohttp
 import asyncio
 
-
-async def live(request):
-    
-    async with aiohttp.ClientSession() as session:
-        async with aiohttp.ClientSession() as session2:
-            async with session.get('http://api.coinlayer.com/live?access_key=ab2978034ee6b835f2e20c4c75a4f51b', ) as resp:
-                    if resp.status == 200:
-                        data = await resp.json()
-                        a = data['rates']
-                    return render(request, 'badge/live.html',{'live':a })  
-
 async def list(request):
     async with aiohttp.ClientSession() as session2:
        async with session2.get('http://api.coinlayer.com/list?access_key=ab2978034ee6b835f2e20c4c75a4f51b', ) as respo2:
