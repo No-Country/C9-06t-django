@@ -1,9 +1,9 @@
 {% extends 'base.html' %}
 {% load static %}
 
-  {% block titulo %}
+  {% block title %}
     Noticias
-  {% endblock titulo %}
+  {% endblock title %}
 
   {% block static %}
 
@@ -18,7 +18,7 @@
   <div class="container p-5 h-100">
     <div class="row d-flex justify-content-center align-items-center h-100">
       <div class="card mb-3">
-        <img class="card-img-top"" src="/static/img/noticias/bannernew2.jpg"
+        <img class="card-img-top"" src="{% static 'img/news/bannernew2.jpg' %}"
         alt="Card image cap">
         <div class="card-body">
           <h2 class="card-title text-center">
