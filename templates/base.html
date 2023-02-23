@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <title>{% block titulo %}ExMoney{% endblock titulo %}</title>
+    <title>{% block title %}ExMoney{% endblock title %}</title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!-- Create favicon -->
@@ -58,44 +58,44 @@
                 >
                   <ul id="nav" class="navbar-nav ms-auto">
                     <li class="nav-item">
-                      <a class="inicio" href="{% url 'home' %}">Inicio</a>
+                      <a href="{% url 'home' %}">Inicio</a>
                     </li>
                     
                     <li class="nav-item">
-                      <a class="divisas" href="{% url 'list' %}">Divisas</a>
+                      <a href="{% url 'list' %}">Divisas</a>
                     </li>
                     <li class="nav-item">
   
                       <!-- ? En esta parte necesitamos que valide si estamos en home o no, en caso de que si funciona como una # normal, pero en caso de que no necesitamos volver a home -->
                       
-                      <a class="calculadora" href="#calculadora">Calculadora</a>
+                      <a href="#calculadora">Calculadora</a>
                     </li>
 
                     {% if request.user.is_authenticated %}
                     <li class="nav-item">
-                      <a class="contacto" href="{% url 'contacto' %}">Contacto</a>
+                      <a href="{% url 'contact' %}">Contacto</a>
                     </li>
 
                     <li class="nav-item">
-                      <a class="cerrar-sesion" href="{% url 'upgrade' %}">Editar Usuario</a>
+                      <a href="{% url 'upgrade' %}">Editar Usuario</a>
                     </li>
 
                     <li class="nav-item">
-                      <a class="cerrar-sesion" href="{% url 'logout' %}">Cerrar Sesión</a>
+                      <a href="{% url 'logout' %}">Cerrar Sesión</a>
                     </li>
 
                     <li class="">
-                      <a class="saludo">Bienvenido {{ request.user.username }}</a>                    
+                      <a class="greats">Bienvenido {{ request.user.username }}</a>                    
                     </li>
 
                     {% else %}
 
                     <li class="nav-item">
-                      <a class="iniciar-sesion" href="{% url 'login' %}">Iniciar Sesión</a>
+                      <a href="{% url 'login' %}">Iniciar Sesión</a>
                     </li>
 
                     <li class="nav-item">
-                      <a class="registrarse" href="{% url 'register' %}">Registrarse</a>
+                      <a href="{% url 'register' %}">Registrarse</a>
                     </li>
                     
                     {% endif %}
@@ -124,35 +124,35 @@
           <div class="row">
             <div class="col-xl-4 col-md-6">
               <div class="footer-widget">
-                <h3><a href="{% url 'servicios' %}"> Servicios</a></h3>
+                <h3><a href="{% url 'services' %}"> Servicios</a></h3>
                 <ul class="links">
-                  <li><a href="{% url 'servicios' %}">Mercado</a></li>
-                  <li><a href="{% url 'servicios' %}">Divisas</a></li>
-                  <li><a href="{% url 'servicios' %}">Calculadora</a></li>
-                  <li><a href="{% url 'servicios' %}">Wallet</a></li>
+                  <li><a href="{% url 'services' %}">Mercado</a></li>
+                  <li><a href="{% url 'services' %}">Divisas</a></li>
+                  <li><a href="{% url 'services' %}">Calculadora</a></li>
+                  <li><a href="{% url 'services' %}">Wallet</a></li>
                 </ul>
               </div>
             </div>
             <div class="col-xl-4 col-md-6">
               <div class="footer-widget">
-                <h3><a href="{% url 'soporte' %}">Soporte</a></h3>
+                <h3><a href="{% url 'support' %}">Soporte</a></h3>
                 <ul class="links">
-                  <li><a href="{% url 'soporte' %}">Guia principiantes</a></li>
-                  <li><a href="{% url 'soporte' %}">Preguntas frecuentes</a></li>
-                  <li><a href="{% url 'soporte' %}">Feedback</a></li>
-                  <li><a href="{% url 'soporte' %}">Centro de Ayuda</a></li>
+                  <li><a href="{% url 'support' %}">Guia principiantes</a></li>
+                  <li><a href="{% url 'support' %}">Preguntas frecuentes</a></li>
+                  <li><a href="{% url 'support' %}">Feedback</a></li>
+                  <li><a href="{% url 'support' %}">Centro de Ayuda</a></li>
                 </ul>
               </div>
             </div>
             <div class="col-xl-3 col-md-6">
               <div class="footer-widget">
-                <h3><a href="{% url 'empresa' %}">Empresa</a></h3>
+                <h3><a href="{% url 'company' %}">Empresa</a></h3>
                 <ul class="links">
-                  <li><a href="{% url 'empresa' %}">Sobre nosotros</a></li>
-                  <li><a href="{% url 'empresa' %}">Vision</a></li>
-                  <li><a href="{% url 'empresa' %}">Aviso de riesgo</a></li>
+                  <li><a href="{% url 'company' %}">Sobre nosotros</a></li>
+                  <li><a href="{% url 'company' %}">Vision</a></li>
+                  <li><a href="{% url 'company' %}">Aviso de riesgo</a></li>
                   <li>
-                    <a href="{% url 'empresa' %}">Politica de privacidad</a>
+                    <a href="{% url 'company' %}">Politica de privacidad</a>
                   </li>
                 </ul>
               </div>
@@ -172,7 +172,7 @@
     <script src="{% static 'js/tiny-slider.js' %}"></script>
     <script src="{% static 'js/wow.min.js' %}"></script>
     <script src="{% static 'js/polifill.js' %}"></script>
-    <script src="{% static 'js/main.js' %}"></script> <!-- si se rompe algo es por esta linea -->
+    <script src="{% static 'js/main.js' %}"></script>
     <script src="{% static 'js/hoverEffect.js' %}"></script>
     <script src="{% static 'js/scrolltop.js' %}"></script>
     {% block js %} {% endblock js %}

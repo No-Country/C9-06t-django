@@ -1,10 +1,10 @@
-
 {% extends 'base.html' %}
+
 {% load static %}
 
-  {% block titulo %}
+{% block title %}
     Noticias
-  {% endblock titulo %}
+{% endblock title %}
 
   {% block static %}
 
@@ -20,7 +20,7 @@
   <div class="container p-5 h-100">
     <div class="row d-flex justify-content-center align-items-center h-100">
       <div class="card mb-3">
-        <img class="card-img-top"" src="/static/img/noticias/bannernew1.jpeg" alt="Card image cap">
+        <img class="card-img-top"" src="{% static 'img/news/bannernew1.jpeg' %}" alt="Card image cap">
         <div class="card-body">
           <h2 class="card-title text-center">El índice S and P 500 registró al cierre de la jornada de este 17 de febrero una pérdida de 0,28%</h2>
           <br>

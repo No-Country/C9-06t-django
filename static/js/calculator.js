@@ -3,7 +3,7 @@ const amount1 = document.getElementById('amount-1');
 const amount2 = document.getElementById('amount-2');
 const button = document.querySelector('.calculator-button');
 const loader = document.querySelector(".loader");
-const buttonText = document.querySelector(".calcular-button-text");
+const buttonText = document.querySelector(".calculator-button-text");
 const buttonSwap = document.querySelector(".swap-button");
 
 const data = {
@@ -78,7 +78,7 @@ document.addEventListener('click', (e)=>{
         currency2 = $select[1].value;
     }
 
-    if(e.target.matches('.calculator-button') || e.target.matches('.calcular-button-text')){   
+    if(e.target.matches('.calculator-button') || e.target.matches('.calculator-button-text')){   
         if (value1 && currency1 !== currency2) {
             amount1.style.outline="none";
             $select[0].style.outline="none";
