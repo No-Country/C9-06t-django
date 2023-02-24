@@ -19,18 +19,15 @@ Divisas y Cryptos
             <div class="curr-nav">
                 <a href="{% url 'list_bank' %}" class="menu-element"><h2 class="title">DIVISAS</h2></a>
                 <a href="{% url 'expand' %}" class="menu-element"><h2 class="title">CRIPTO</h2></a>
+                
                 <div class="search-input">
                     <div class="search-img"><i class="fas fa-search"></i></div>
                     <input type="search" class="curr-search" placeholder="Buscar moneda">
                 </div>
             </div>
             <nav class="menu-list">
-                {% if request.user.is_authenticated %}
-                <a href="{% url 'list' %}" class="menu-element">Lista</a>
-                <a href="{% url 'expand' %}" class="menu-element">Detalle</a>
-                {% else %}
-                <a href="{% url 'list' %}" class="menu-element">Lista</a>
-                {% endif %}
+                <a href="{% url 'list_bank' %}" class="menu-element">Lista</a>
+
             </nav>
         </header>
         <main class="curr-row">
@@ -42,37 +39,32 @@ Divisas y Cryptos
             </div>
             
                 <div class="curr-row-element">
+
                     
                     <div class="last-value"> 
 
-                        {% for key, value in list.items %}
+                        {% for key, value in expand.items %}
 
-                            <img width="30" height="30" src="{{ value.icon_url }}" alt="Logo">
+
+                        <p class="usdt-value">{{ key }}</p>
+                                
+                        {% endfor %}
+                    </div>
+                                    
+                    <div class="last-value"> 
+
+                        {% for key, value in expand.items %}
+
+                        <p class="usdt-value">{{ value }}</p>
+
                                 
                         {% endfor %}
                     </div>
                     
                     <div class="last-value"> 
-                        {% for key, value in list.items %}
+                        {% for key, value in expan.items %}
                 
-                            <p class="usdt-value">{{ value.symbol }}</p>
-
-                        {% endfor %}
-                    </div>
-
-
-                    <div class="last-value"> 
-                        {% for key, value in list.items %}
-                
-                            <p class="usdt-value">{{ value.name }}</p>
-
-                        {% endfor %}
-                    </div>
-
-                    <div class="last-value"> 
-                        {% for key, value in list.items %}
-                
-                            <p class="usdt-value">{{ value.max_supply }}</p>
+                            <p class="usdt-value">{{ value }}</p>
 
                         {% endfor %}
                     </div>
@@ -98,3 +90,4 @@ Divisas y Cryptos
 </section>
 
 {% endblock boody %}
+

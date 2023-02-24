@@ -68,7 +68,7 @@
   
                       <!-- ? En esta parte necesitamos que valide si estamos en home o no, en caso de que si funciona como una # normal, pero en caso de que no necesitamos volver a home -->
                       
-                      <a href="#calculadora">Calculadora</a>
+                      <a href="#calculator">Calculadora</a>
                     </li>
 
                     {% if request.user.is_authenticated %}
@@ -133,10 +133,9 @@
             </div>
             <div class="col-xl-4 col-md-6">
               <div class="footer-widget">
-                <h3><a href="{% url 'support' %}">Soporte</a></h3>
+                <h3><a href="">Soporte</a></h3>
                 <ul class="links">
-                  <li><a href="{% url 'support' %}">Guia principiantes</a></li>
-                  <li><a href="{% url 'support' %}">Preguntas frecuentes</a></li>
+                  <li><a href="">Preguntas frecuentes</a></li>
                 </ul>
               </div>
             </div>
