@@ -96,7 +96,7 @@
 
 
 
-.menu-element {
+.menu-elements {
     position: relative;
     text-decoration: none;
     color:var(--font-color);
@@ -104,7 +104,11 @@
     font-weight: bold;
 }
 
-.menu-element:hover::after {
+.menu-elements:hover {
+    color:var(--main-color);
+}
+
+.menu-elements:hover::after {
     content: "";
     display: block;
     position: absolute;
@@ -117,9 +121,25 @@
     border-radius: 50%;
 }
 
-.menu-element:hover {
+
+.active2 {
+    content:"";
     color:var(--main-color);
 }
+
+.active2::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 125%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 8px;
+    height: 8px;
+    background-color: var(--main-color);
+    border-radius: 50%;
+}
+
 
 .curr-row {
     display:flex;
