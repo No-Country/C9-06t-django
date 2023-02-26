@@ -56,10 +56,22 @@
                   class="collapse navbar-collapse sub-menu-bar"
                   id="navbarSupportedContent"
                 >
-                  <ul id="nav" class="navbar-nav ms-auto">
-                    <li class="nav-item">
+                <ul id="nav" class="navbar-nav ms-auto navbar-expand-lg">
+                  {% if request.resolver_match.url_name == 'home' %}
+                  <li class="nav-item dropdown">
+                      <a href="#" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Inicio</a>
+                      <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                          <a class="dropdown-item" href="#calculadora">Calculadora</a>
+                          <a class="dropdown-item" href="#feature">Ventajas</a>
+                          <a class="dropdown-item" href="#last-news">Noticias</a>
+                          <a class="dropdown-item" href="#faq">FAQ</a>
+                      </div>
+                  </li>
+                  {% else %}
+                  <li class="nav-item">
                       <a href="{% url 'home' %}">Inicio</a>
-                    </li>
+                  </li>
+                  {% endif %}
                     
                     <li class="nav-item">
                       <a href="{% url 'list' %}" class="Currency">Divisas</a>
