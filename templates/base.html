@@ -64,12 +64,7 @@
                     <li class="nav-item">
                       <a href="{% url 'list' %}" class="Currency">Divisas</a>
                     </li>
-                    <li class="nav-item">
-  
-                      <!-- ? En esta parte necesitamos que valide si estamos en home o no, en caso de que si funciona como una # normal, pero en caso de que no necesitamos volver a home -->
-                      
-                      <a href="#calculator">Calculadora</a>
-                    </li>
+
 
                     {% if request.user.is_authenticated %}
                     <li class="nav-item">
@@ -84,7 +79,7 @@
                       <a href="{% url 'logout' %}">Cerrar Sesión</a>
                     </li>
 
-                    <li class="">
+                    <li class="nav-item">
                       <a class="greats">Bienvenido {{ request.user.username }}</a>                    
                     </li>
 

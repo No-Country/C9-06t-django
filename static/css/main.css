@@ -660,6 +660,9 @@ p {
     width: 30px;
     height: 30px;
   }
+  .hero-img{
+    display: none;
+  }
 }
 
 .navbar-nav .sub-nav-toggler span {
