@@ -5,7 +5,7 @@ import asyncio
 
 async def list(request):
     async with aiohttp.ClientSession() as session1:
-       async with session1.get('http://api.coinlayer.com/list?access_key=ab2978034ee6b835f2e20c4c75a4f51b', ) as respo1:
+       async with session1.get('http://api.coinlayer.com/list?access_key=450eabae533ad6dda52c606e6526c3f7', ) as respo1:
                     if respo1.status  == 200:
                         data = await respo1.json()
                         b = data['crypto']  
@@ -14,7 +14,7 @@ async def list(request):
 
 async def expand(request):
     async with aiohttp.ClientSession() as session2:
-        async with session2.get('http://api.coinlayer.com/live?access_key=ab2978034ee6b835f2e20c4c75a4f51b&expand=1', ) as resp2:
+        async with session2.get('http://api.coinlayer.com/live?access_key=450eabae533ad6dda52c606e6526c3f7&expand=1', ) as resp2:
                     if resp2.status  == 200:
                         data = await resp2.json()
                         c = data['rates']
@@ -30,8 +30,7 @@ async def consulta(request):
                         data3 = await resp3.json()
                         data4 = await resp4.json()
                         a = data3['rates']
-                        
-                    return render(request, 'badge/list_bank.html',{'expand':a ,'expan':data4 } )  
+                    return render(request, 'badge/list_bank.html',{'expand':a, 'expand2':data4} )  
 
 
 
