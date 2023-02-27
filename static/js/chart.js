@@ -1,6 +1,5 @@
 let myChart=null;
 function reloadChart(time){
-    const formattedDate = new Date(Date.now() - 24 * 60 * 60 * 1000).toISOString().slice(0, 10);
     const selects=document.querySelectorAll('.calculator-select');
     let url = `https://api.frankfurter.app/${time}..?from=${selects[0].value}&to=${selects[1].value}`;
     let label = [],
@@ -8,30 +7,30 @@ function reloadChart(time){
     
     const ctx = document.getElementById('currency-chart');
     let config = {
-        type: 'line', // tipo de gráfico
-        data: { // datos que se van a mostrar
-            labels: [], // etiquetas del eje X
-            datasets: [{ // conjunto de datos
-                label: '', // nombre de la serie de datos
-                data: [], // datos en sí
-                borderColor: 'rgb(117, 159, 65)', // color de la línea
-                tension: 0.5 // suavidad de la línea
+        type: 'line',
+        data: { 
+            labels: [],
+            datasets: [{ 
+                label: '', 
+                data: [], 
+                borderColor: 'rgb(117, 159, 65)',
+                tension: 0.5 
             }]
         },
-        options: { // opciones del gráfico
+        options: { 
             scales: {
                 x: {
-                    type: 'time', // tipo de escala del eje X
-                    time: { // configuración de la escala de tiempo
-                        unit: 'month', // unidad de tiempo (día, semana, mes, etc.)
+                    type: 'time', 
+                    time: { 
+                        unit: 'month', 
                         displayFormats: {
-                            day: 'MMM DD' // formato de visualización de la etiqueta
+                            day: 'MMM DD' 
                         }
                     }
                 },
                 y: {
-                    suggestedMin: 0, // valor mínimo del eje Y
-                    suggestedMax: 0 // valor máximo del eje Y
+                    suggestedMin: 0, 
+                    suggestedMax: 0
                 }
             }
         }
@@ -46,11 +45,11 @@ function reloadChart(time){
             label.push(date);
             datos.push(data.rates[date][selects[1].value]);
         }
-        config.data.datasets[0].label=`Tipo de cambio ${selects[0].value}/${selects[1].value}`
+        config.data.datasets[0].label=`Tipo de cambio ${selects[0].value}/${selects[1].value}`;
         config.data.labels = label;
         config.data.datasets[0].data = datos;
-        config.options.scales.y.suggestedMax=(data.rates[formattedDate][selects[1].value])+1;
-        config.options.scales.y.suggestedMin=(data.rates[formattedDate][selects[1].value])-1;
+        config.options.scales.y.suggestedMax=Object.keys(data.rates)[Object.keys(data.rates).length-1][selects[1].value]+1;
+        config.options.scales.y.suggestedMin=Object.keys(data.rates)[Object.keys(data.rates).length-1][selects[1].value]-1;
         if(myChart != null){
             myChart.destroy();
             myChart = new Chart(ctx, config); 

@@ -536,6 +536,10 @@ p {
   display: none;
 }
 
+.nav-item a.greats:hover::before{
+  display: none;
+}
+
 .navbar-nav .nav-item a::before {
   content: '';
   width: 8px;
