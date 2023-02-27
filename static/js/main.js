@@ -117,10 +117,11 @@
             setTimeout(animateScroll, increment);
           }
         });
-  
+        
         animateScroll();
       };
-
+    }
+    
     Math.easeInOutQuad = function (t, b, c, d) {
 
         t /= d/2;

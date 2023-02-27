@@ -20,25 +20,27 @@
           </p>
           {% if request.user.is_authenticated %}
 
-            <a
+            <!-- <a
               href="{% url 'logout' %}"
               class="main-btn btn-hover wow fadeInUp"
               data-wow-delay=".6s"
               >Cerrar sesión</a
-            >
+            > -->
           {% else %}
-            <a
-              href="{% url 'register' %}"
+            <div class="index-buttons-wrapper">
+              <a
+                href="{% url 'register' %}"
+                class="main-btn btn-hover wow fadeInUp"
+                data-wow-delay=".6s"
+                >Registrarse</a
+              >
+              <a
+              href="{% url 'login' %}"
               class="main-btn btn-hover wow fadeInUp"
               data-wow-delay=".6s"
-              >Registrarse</a
-            >
-            <a
-            href="{% url 'login' %}"
-            class="main-btn btn-hover wow fadeInUp"
-            data-wow-delay=".6s"
-            >Iniciar Sessión</a
-          >
+              >Iniciar Sessión</a
+              >
+            </div>
           {% endif %}
         </div>
       </div>

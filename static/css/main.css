@@ -37,7 +37,7 @@ button:focus,
 }
 
 a:hover {
-  color: #739e40;
+  color: #000;
 }
 
 a {
@@ -2154,5 +2154,11 @@ select:focus {
 .dropdown-item{
   color: black !important;
   margin-left: 4%;
+}
+
+.index-buttons-wrapper {
+  display:flex;
+  gap:1rem;
+  flex-wrap: wrap;
 }
 
