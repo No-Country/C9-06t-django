@@ -51,7 +51,7 @@
 }
 
 .search-input {
-    width: 15vw;
+    width: 175px;
     height: 2rem;
     border: 2px var(--borders) solid;
     border-radius: 6px;
@@ -73,15 +73,17 @@
     border:0;
     border-left: 2px var(--borders) solid;
     padding:0.5rem;
+    flex-wrap: wrap;
 }
 
 .curr-nav {
     display:flex;
     flex-direction: row;
     align-items: center;
-    max-width: 100%;
-    margin:0 1rem 0 1rem;
+    width: 100%;
+    padding:0 1rem;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 
@@ -150,9 +152,8 @@
 
 .curr-titles {
     display:flex;
-    width:100%;
+    width:100%;  
     font-weight: bold;
-   
 }
 
 .curr-element {
@@ -165,6 +166,10 @@
 .curr-row-element {
     display:flex;
     align-items: left;
+}
+
+.curr-name {
+    overflow: hidden;
 }
 
 .curr-img {
@@ -230,4 +235,40 @@
 
 .lost {
     color:red;
+}
+
+@media screen and (max-width:435px) {
+    .curr-img {
+        display:none;
+    }
+    .curr-nav {
+        margin:0;
+    }
+}
+
+@media screen and (max-width:1000px){
+    .value-volume, .value-high, .value-low{
+        display:none;
+    }
+    .market:nth-child(5), .market:nth-child(4), .market:nth-child(3){
+        display: none;
+    }
+    .last-value {
+        width:20%;
+    }
+    .exchange {
+        display:flex;
+    }
+}
+
+@media screen and (max-width:500px){
+    .value-cap, .value-sup{
+        display:none;
+    }
+    .market:nth-child(6), .market:nth-child(7){
+        display: none;
+    }
+    .last-value {
+        width:32.6%;
+    }
 }

@@ -45,9 +45,9 @@ Divisas y Cryptos
         </header>
         <main class="curr-row">
             <div class="curr-titles">
-                <p class="currency curr-element">Símbolo</p>
-                <p class="value curr-element">Tasa de cambio</p>
-                <p class="exchange curr-element">Tasa media máx.</p>
+                <p class="market curr-element">Símbolo</p>
+                <p class="market curr-element">Tasa de cambio</p>
+                <p class="market curr-element">Tasa media máx.</p>
                 <p class="market curr-element">Tasa media mín.</p>
                 <p class="market curr-element">Volumen(24H)</p>
                 <p class="market curr-element">Cap. de mercado</p>
@@ -74,51 +74,51 @@ Divisas y Cryptos
                     {% endif %}
 
                     {% if value.high == None %}
-                        <div class="last-value"> 
+                        <div class="last-value value-high"> 
                             <p class="usdt-value"> - </p>    
                         </div>
                     {% else %}
-                        <div class="last-value"> 
+                        <div class="last-value value-high"> 
                             <p class="usdt-value">${{ value.high|floatformat:4 }}</p>    
                         </div>
                     {% endif %}
 
                     {% if value.low == None %}
-                        <div class="last-value"> 
+                        <div class="last-value value-low"> 
                             <p class="usdt-value"> - </p>    
                         </div>
                     {% else %}
-                        <div class="last-value"> 
+                        <div class="last-value value-low"> 
                             <p class="usdt-value">${{ value.low|floatformat:4 }}</p>    
                         </div>
                     {% endif %}
                     
                     {% if value.vol == None %}
-                        <div class="last-value"> 
+                        <div class="last-value value-volume"> 
                             <p class="usdt-value"> - </p>    
                         </div>
                     {% else %}
-                        <div class="last-value"> 
+                        <div class="last-value value-volume"> 
                             <p class="usdt-value">${{ value.vol|floatformat:3 }}</p>    
                         </div>
                     {% endif %}
 
                     {% if value.cap == None %}
-                        <div class="last-value"> 
+                        <div class="last-value value-cap"> 
                             <p class="usdt-value"> - </p>    
                         </div>
                     {% else %}
-                        <div class="last-value"> 
+                        <div class="last-value value-cap"> 
                             <p class="usdt-value">${{ value.cap|floatformat:3 }}</p>    
                         </div>
                     {% endif %}
 
                     {% if value.sup == None %}
-                        <div class="last-value"> 
+                        <div class="last-value value-sup"> 
                             <p class="usdt-value"> - </p>    
                         </div>
                     {% else %}
-                        <div class="last-value"> 
+                        <div class="last-value value-sup"> 
                             <p class="usdt-value">${{ value.sup|floatformat:3 }}</p>    
                         </div>
                     {% endif %}

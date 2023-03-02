@@ -37,33 +37,29 @@ Divisas y Cryptos
             <div class="curr-titles">
                 <p class="currency curr-element">Moneda</p>
                 <p class="value curr-element">Simbolo</p>
-                <p class="market curr-element">Cap. de Mercado</p>
+                <p class="exchange curr-element">Cap. de Mercado</p>
             </div>
             
-                {% for key, value in list.items %}
-                    <div class="curr-row-element">
-                        <div class="name-container2">
-                            <img class="curr-img" src="{{ value.icon_url }}" alt="Logo">
-                            <p class="curr-name">{{ value.name }}</p>
-                        </div>
-                        
-                        <div class="last-value2">                             
-                            <p class="usdt-value">{{ value.symbol }}</p>
-                        </div>
-                        
-                        {% if value.max_supply == "N/A" %}
-                            <div class="last-value2"> 
-                                <p class="usdt-value"> - </p>    
-                            </div>
-                        {% else %}
-                            <div class="last-value2"> 
-                                <p class="usdt-value">${{ value.max_supply }}</p>    
-                            </div>
-                        {% endif %}
+            {% for key, value in list.items %}
+                <div class="curr-row-element">
+                    <div class="name-container2">
+                        <img class="curr-img" src="{{ value.icon_url }}" alt="Logo">
+                        <p class="curr-name">{{ value.name }}</p>
                     </div>
-                {% endfor %}
-                    
-            
+                    <div class="last-value2">                             
+                        <p class="usdt-value">{{ value.symbol }}</p>
+                    </div>
+                    {% if value.max_supply == "N/A" %}
+                        <div class="last-value2"> 
+                            <p class="usdt-value"> - </p>    
+                        </div>
+                    {% else %}
+                        <div class="last-value2"> 
+                            <p class="usdt-value">${{ value.max_supply }}</p>    
+                        </div>
+                    {% endif %}
+                </div>
+            {% endfor %}
 
         </main>
         {% block js %}
